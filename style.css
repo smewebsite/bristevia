@@ -1,0 +1,38 @@
+body {
+  font-family: "Times New Roman", serif;
+  background-color: #f8f4ec;
+  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2b2a4c;
+  color: gold;
+  text-align: center;
+  padding: 20px;
+}
+
+nav a {
+  color: gold;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 30px;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #2b2a4c;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}

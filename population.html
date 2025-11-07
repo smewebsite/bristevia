@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Bristevia — Population & Settlements</title>
+  <style>
+    :root{
+      --navy:#0f1a3a;
+      --navy-2:#08102a;
+      --gold:#caa93c;
+      --cream:#f6f3ee;
+      --muted:#cfc3a9;
+      --panel:#0b1628;
+      --bg:#071022;
+      --card:#08182e;
+      --accent:#0f274f;
+      --text:#f3efe8;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Georgia", "Times New Roman", serif;
+      background: linear-gradient(180deg,var(--bg), #031025 120%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    header{
+      background: linear-gradient(90deg,var(--navy), var(--navy-2));
+      padding:28px 20px;
+      text-align:center;
+      border-bottom:3px solid rgba(202,169,60,0.12);
+    }
+    header h1{
+      margin:0;
+      color:var(--gold);
+      font-size:1.5rem;
+      letter-spacing:1px;
+    }
+    header p{ margin:6px 0 0; color:var(--muted); font-size:0.95rem }
+
+    .wrap{
+      max-width:1200px;
+      margin:28px auto;
+      padding:16px;
+    }
+
+    .controls{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-bottom:18px;
+    }
+    .controls .search{
+      flex:1 1 280px;
+    }
+    input[type="search"]{
+      width:100%;
+      padding:10px 12px;
+      border-radius:8px;
+      border:1px solid rgba(255,255,255,0.04);
+      background:rgba(255,255,255,0.02);
+      color:var(--text);
+      font-size:15px;
+    }
+    .summary{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03);
+      padding:12px 14px;
+      border-radius:10px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    /* grid: cards + table */
+    .grid{
+      display:grid;
+      grid-template-columns: 380px 1fr;
+      gap:20px;
+      align-items:start;
+    }
+
+    /* cards (regions) */
+    .cards{
+      position:sticky;
+      top:20px;
+      max-height:calc(100vh - 80px);
+      overflow:auto;
+      padding-right:6px;
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.03);
+      padding:12px;
+      margin-bottom:14px;
+      border-radius:10px;
+    }
+    .card h3{
+      margin:6px 0;
+      color:var(--gold);
+      font-size:1rem;
+    }
+    .card ul{ margin:8px 0 6px 18px; padding:0; color:var(--text) }
+    .card li{ margin:6px 0; font-size:0.95rem; color:var(--text) }
+    .region-total{ text-align:right; color:#ffdf80; font-weight:700; margin-top:8px }
+
+    .collapse-btn{
+      float:right;
+      background:transparent;
+      border:0;
+      color:var(--muted);
+      cursor:pointer;
+      font-size:13px;
+    }
+
+    /* Table area */
+    .panel{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:12px;
+      padding:18px;
+      border:1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+    }
+
+    .panel h2{ margin:0 0 8px 0; color:var(--gold); font-size:1.15rem }
+    .note{ color:var(--muted); font-size:0.95rem; margin-bottom:12px }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      font-size:14px;
+      margin-top:12px;
+      table-layout:fixed;
+      word-wrap:break-word;
+    }
+    thead th{
+      text-align:left;
+      padding:10px;
+      border-bottom:1px solid rgba(255,255,255,0.04);
+      color:var(--muted);
+      font-weight:700;
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+    }
+    tbody td{
+      padding:10px;
+      border-bottom:1px solid rgba(255,255,255,0.02);
+      color:var(--text);
+    }
+    tbody tr:hover td{ background: rgba(202,169,60,0.02) }
+
+    .small{ font-size:0.9rem; color:var(--muted) }
+    .right{ text-align:right }
+
+    /* responsive */
+    @media (max-width:980px){
+      .grid{ grid-template-columns: 1fr; }
+      .cards{ position:relative; max-height:none; margin-bottom:12px }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>⚜️ BRISTEVIA POPULATION & SETTLEMENTS ⚜️</h1>
+    <p>Interactive list of Regions, Provinces, Cities & Towns — total population shown below</p>
+  </header>
+
+  <div class="wrap">
+
+    <div class="controls">
+      <div class="search">
+        <input id="q" type="search" placeholder="Search region, province, settlement or population — try ‘Stephara’ or ‘1,972,560’" oninput="filterTable()">
+      </div>
+      <div class="summary">
+        Total Population: <span id="totalPopulation">35,896,248</span>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- CARDS: regions -->
+      <div class="cards" aria-label="Regions listing">
+        <!-- CENTRAL -->
+        <div class="card" data-region="central">
+          <h3>🏛 CENTRAL REGION (2)
+            <button class="collapse-btn" onclick="toggleCard(this)">collapse</button>
+          </h3>
+          <ul>
+            <li><strong>Stephara</strong> — Stephara City (Capital) — <span class="pop">1,972,560</span></li>
+            <li><strong>Stephara</strong> — Andravale City — <span class="pop">736,501</span></li>
+            <li><strong>Stephara</strong> — Festona Town — <span class="pop">245,503</span></li>
+            <li><strong>Stephara</strong> — Greendale Town — <span class="pop">245,436</span></li>
+            <li><strong>Jaybrienne</strong> — Valloré City (Capital) — <span class="pop">1,255,098</span></li>
+            <li><strong>Jaybrienne</strong> — Brionne City — <span class="pop">686,905</span></li>
+            <li><strong>Jaybrienne</strong> — Britswell Town — <span class="pop">229,004</span></li>
+            <li><strong>Jaybrienne</strong> — Rosamere Town — <span class="pop">228,993</span></li>
+          </ul>
+          <div class="region-total">Regional Total: 33,237 sq km</div>
+        </div>
+
+        <!-- WEST -->
+        <div class="card" data-region="west">
+          <h3>🌊 WEST REGION (8)
+            <button class="collapse-btn" onclick="toggleCard(this)">collapse</button>
+          </h3>
+          <ul>
+            <li><strong>Orlencia</strong> — Drakemount City — <span class="pop">605,007</span></li>
+            <li><strong>Orlencia</strong> — Cindora Town — <span class="pop">297,004</span></li>
+            <li><strong>Orlencia</strong> — Volcair Town — <span class="pop">197,989</span></li>
+
+            <li><strong>Westrion</strong> — Goldhaven City — <span class="pop">1,050,003</span></li>
+            <li><strong>Westrion</strong> — Sunspire City — <span class="pop">209,997</span></li>
+            <li><strong>Westrion</strong> — Ambercoast Town — <span class="pop">140,000</span></li>
+
+            <li><strong>Coastria</strong> — Seamaris City — <span class="pop">450,001</span></li>
+            <li><strong>Coastria</strong> — Baycrest Town — <span class="pop">270,002</span></li>
+            <li><strong>Coastria</strong> — Fishhaven Town — <span class="pop">179,997</span></li>
+
+            <li><strong>Ronjiel</strong> — Ronjiel City — <span class="pop">780,005</span></li>
+            <li><strong>Ronjiel</strong> — Jaymount City — <span class="pop">311,999</span></li>
+            <li><strong>Ronjiel</strong> — Mountverne Town — <span class="pop">207,996</span></li>
+
+            <li><strong>Virelion</strong> — Thalindor City — <span class="pop">1,050,001</span></li>
+            <li><strong>Virelion</strong> — Windmere Town — <span class="pop">630,000</span></li>
+            <li><strong>Virelion</strong> — Lunebrook Town — <span class="pop">419,999</span></li>
+
+            <li><strong>Draxenor</strong> — Shadowfen City — <span class="pop">450,008</span></li>
+            <li><strong>Draxenor</strong> — Darkwater Town — <span class="pop">269,997</span></li>
+            <li><strong>Draxenor</strong> — Blackmarsh Town — <span class="pop">179,995</span></li>
+
+            <li><strong>Falrion</strong> — Silverhold City — <span class="pop">1,100,006</span></li>
+            <li><strong>Falrion</strong> — Brightpeak City — <span class="pop">539,998</span></li>
+            <li><strong>Falrion</strong> — Shimmerbrook Town — <span class="pop">359,996</span></li>
+
+            <li><strong>Regalith</strong> — Cresvane City — <span class="pop">750,003</span></li>
+            <li><strong>Regalith</strong> — Highvale Town — <span class="pop">449,998</span></li>
+            <li><strong>Regalith</strong> — Stonebay Town — <span class="pop">299,999</span></li>
+          </ul>
+          <div class="region-total">Regional Total: 152,341 sq km</div>
+        </div>
+
+        <!-- NORTH -->
+        <div class="card" data-region="north">
+          <h3>❄ NORTH REGION (7)
+            <button class="collapse-btn" onclick="toggleCard(this)">collapse</button>
+          </h3>
+          <ul>
+            <li><strong>Northaven</strong> — Frostwall City — <span class="pop">400,002</span></li>
+            <li><strong>Northaven</strong> — Aurora City — <span class="pop">239,999</span></li>
+            <li><strong>Northaven</strong> — Snowglen Town — <span class="pop">159,999</span></li>
+
+            <li><strong>Montelune</strong> — Mooncrest City — <span class="pop">300,001</span></li>
+            <li><strong>Montelune</strong> — Starhaven Town — <span class="pop">179,999</span></li>
+            <li><strong>Montelune</strong> — Mistpeak Town — <span class="pop">119,998</span></li>
+
+            <li><strong>Basilion</strong> — Cresvane City — <span class="pop">350,004</span></li>
+            <li><strong>Basilion</strong> — Oakenshade City — <span class="pop">209,997</span></li>
+            <li><strong>Basilion</strong> — Stonefield Town — <span class="pop">139,999</span></li>
+
+            <li><strong>Aethelburg</strong> — Falcrest City — <span class="pop">350,005</span></li>
+            <li><strong>Aethelburg</strong> — Skyhold City — <span class="pop">209,996</span></li>
+            <li><strong>Aethelburg</strong> — Ironridge Town — <span class="pop">139,999</span></li>
+
+            <li><strong>Sylvaren</strong> — Leafmere City — <span class="pop">300,006</span></li>
+            <li><strong>Sylvaren</strong> — Willowbend Town — <span class="pop">179,997</span></li>
+            <li><strong>Sylvaren</strong> — Northpine Town — <span class="pop">119,997</span></li>
+
+            <li><strong>Jaeyara</strong> — Jaeyara City — <span class="pop">300,008</span></li>
+            <li><strong>Jaeyara</strong> — Auroravale Town — <span class="pop">179,995</span></li>
+            <li><strong>Jaeyara</strong> — Marigold Town — <span class="pop">119,997</span></li>
+
+            <li><strong>Andriel</strong> — Andriel City — <span class="pop">300,003</span></li>
+            <li><strong>Andriel</strong> — Edenvale Town — <span class="pop">179,999</span></li>
+            <li><strong>Andriel</strong> — Westgrove Town — <span class="pop">119,998</span></li>
+          </ul>
+          <div class="region-total">Regional Total: 170,506 sq km</div>
+        </div>
+
+        <!-- EAST -->
+        <div class="card" data-region="east">
+          <h3>🌅 EAST REGION (7)
+            <button class="collapse-btn" onclick="toggleCard(this)">collapse</button>
+          </h3>
+          <ul>
+            <li><strong>Orinthal</strong> — Goldspire City — <span class="pop">550,002</span></li>
+            <li><strong>Orinthal</strong> — Sunpeak City — <span class="pop">269,999</span></li>
+            <li><strong>Orinthal</strong> — Brightfort Town — <span class="pop">179,999</span></li>
+
+            <li><strong>Eastria</strong> — Eastria City — <span class="pop">450,007</span></li>
+            <li><strong>Eastria</strong> — Dawncrest Town — <span class="pop">269,997</span></li>
+            <li><strong>Eastria</strong> — Eastbrook Town — <span class="pop">179,996</span></li>
+
+            <li><strong>Luminaris</strong> — Crystalhold City — <span class="pop">450,006</span></li>
+            <li><strong>Luminaris</strong> — Frostlight City — <span class="pop">269,998</span></li>
+            <li><strong>Luminaris</strong> — Lightbrook Town — <span class="pop">179,996</span></li>
+
+            <li><strong>Aurelthia</strong> — Moonspire City — <span class="pop">300,004</span></li>
+            <li><strong>Aurelthia</strong> — Silvermoon Town — <span class="pop">179,999</span></li>
+            <li><strong>Aurelthia</strong> — Starwatch Town — <span class="pop">119,997</span></li>
+
+            <li><strong>Eldrosia</strong> — Raventon City — <span class="pop">660,005</span></li>
+            <li><strong>Eldrosia</strong> — Whitethorn Town — <span class="pop">323,998</span></li>
+            <li><strong>Eldrosia</strong> — Stonebriar Town — <span class="pop">215,997</span></li>
+
+            <li><strong>Gravenor</strong> — Stonewall City — <span class="pop">450,003</span></li>
+            <li><strong>Gravenor</strong> — Darkstone Town — <span class="pop">269,999</span></li>
+            <li><strong>Gravenor</strong> — Flintmarch Town — <span class="pop">179,998</span></li>
+
+            <li><strong>Aquaris</strong> — Brightwater City — <span class="pop">550,001</span></li>
+            <li><strong>Aquaris</strong> — Lighthaven City — <span class="pop">270,002</span></li>
+            <li><strong>Aquaris</strong> — Blueford Town — <span class="pop">179,997</span></li>
+          </ul>
+          <div class="region-total">Regional Total: 127,447 sq km</div>
+        </div>
+
+        <!-- SOUTH -->
+        <div class="card" data-region="south">
+          <h3>🌴 SOUTH REGION (6)
+            <button class="collapse-btn" onclick="toggleCard(this)">collapse</button>
+          </h3>
+          <ul>
+            <li><strong>Southmere</strong> — Briswick City — <span class="pop">900,003</span></li>
+            <li><strong>Southmere</strong> — Willowmere Town — <span class="pop">539,999</span></li>
+            <li><strong>Southmere</strong> — Maplehurst Town — <span class="pop">359,998</span></li>
+
+            <li><strong>Starella</strong> — Rosengarde City — <span class="pop">700,005</span></li>
+            <li><strong>Starella</strong> — Petalford Town — <span class="pop">419,997</span></li>
+            <li><strong>Starella</strong> — Verdantia Town — <span class="pop">279,998</span></li>
+
+            <li><strong>Solara</strong> — Solara City — <span class="pop">750,004</span></li>
+            <li><strong>Solara</strong> — Breezefall Town — <span class="pop">449,997</span></li>
+            <li><strong>Solara</strong> — Oakwind Town — <span class="pop">299,999</span></li>
+
+            <li><strong>Velandor</strong> — Velandor City — <span class="pop">600,001</span></li>
+            <li><strong>Velandor</strong> — Skyridge Town — <span class="pop">359,999</span></li>
+            <li><strong>Velandor</strong> — Windshire Town — <span class="pop">239,998</span></li>
+
+            <li><strong>Britonvale</strong> — Brightfield City — <span class="pop">447,874</span></li>
+            <li><strong>Britonvale</strong> — Mistvale Town — <span class="pop">268,724</span></li>
+            <li><strong>Britonvale</strong> — Stormford Town — <span class="pop">179,150</span></li>
+
+            <li><strong>Gabrielis</strong> — Gabrielis City — <span class="pop">600,002</span></li>
+            <li><strong>Gabrielis</strong> — Horizon Bay City — <span class="pop">359,997</span></li>
+            <li><strong>Gabrielis</strong> — Eastsun Town — <span class="pop">239,999</span></li>
+          </ul>
+          <div class="region-total">Regional Total: 101,161 sq km</div>
+        </div>
+
+      </div>
+
+      <!-- TABLE: full data -->
+      <div class="panel" role="region" aria-label="Population table">
+        <h2>📊 Bristevia Population Data</h2>
+        <div class="note small">Total (provided): <strong>35,896,248</strong></div>
+
+        <table id="popTable" aria-describedby="tableDesc">
+          <caption id="tableDesc" style="caption-side:top; text-align:left; color:var(--muted); padding-bottom:6px;">
+            Click a column header to sort. Use the search box above to filter rows.
+          </caption>
+          <thead>
+            <tr>
+              <th style="width:15%">Region</th>
+              <th style="width:20%">Province</th>
+              <th style="width:40%">Settlement</th>
+              <th style="width:25%" class="right">Population</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- CENTRAL -->
+            <tr><td>CENTRAL</td><td>Stephara</td><td>Stephara City (Capital)</td><td class="right">1,972,560</td></tr>
+            <tr><td>CENTRAL</td><td>Stephara</td><td>Andravale City</td><td class="right">736,501</td></tr>
+            <tr><td>CENTRAL</td><td>Stephara</td><td>Festona Town</td><td class="right">245,503</td></tr>
+            <tr><td>CENTRAL</td><td>Stephara</td><td>Greendale Town</td><td class="right">245,436</td></tr>
+            <tr><td>CENTRAL</td><td>Jaybrienne</td><td>Valloré City (Capital)</td><td class="right">1,255,098</td></tr>
+            <tr><td>CENTRAL</td><td>Jaybrienne</td><td>Brionne City</td><td class="right">686,905</td></tr>
+            <tr><td>CENTRAL</td><td>Jaybrienne</td><td>Britswell Town</td><td class="right">229,004</td></tr>
+            <tr><td>CENTRAL</td><td>Jaybrienne</td><td>Rosamere Town</td><td class="right">228,993</td></tr>
+
+            <!-- WEST -->
+            <tr><td>WEST</td><td>Orlencia</td><td>Drakemount City</td><td class="right">605,007</td></tr>
+            <tr><td>WEST</td><td>Orlencia</td><td>Cindora Town</td><td class="right">297,004</td></tr>
+            <tr><td>WEST</td><td>Orlencia</td><td>Volcair Town</td><td class="right">197,989</td></tr>
+
+            <tr><td>WEST</td><td>Westrion</td><td>Goldhaven City</td><td class="right">1,050,003</td></tr>
+            <tr><td>WEST</td><td>Westrion</td><td>Sunspire City</td><td class="right">209,997</td></tr>
+            <tr><td>WEST</td><td>Westrion</td><td>Ambercoast Town</td><td class="right">140,000</td></tr>
+
+            <tr><td>WEST</td><td>Coastria</td><td>Seamaris City</td><td class="right">450,001</td></tr>
+            <tr><td>WEST</td><td>Coastria</td><td>Baycrest Town</td><td class="right">270,002</td></tr>
+            <tr><td>WEST</td><td>Coastria</td><td>Fishhaven Town</td><td class="right">179,997</td></tr>
+
+            <tr><td>WEST</td><td>Ronjiel</td><td>Ronjiel City</td><td class="right">780,005</td></tr>
+            <tr><td>WEST</td><td>Ronjiel</td><td>Jaymount City</td><td class="right">311,999</td></tr>
+            <tr><td>WEST</td><td>Ronjiel</td><td>Mountverne Town</td><td class="right">207,996</td></tr>
+
+            <tr><td>WEST</td><td>Virelion</td><td>Thalindor City</td><td class="right">1,050,001</td></tr>
+            <tr><td>WEST</td><td>Virelion</td><td>Windmere Town</td><td class="right">630,000</td></tr>
+            <tr><td>WEST</td><td>Virelion</td><td>Lunebrook Town</td><td class="right">419,999</td></tr>
+
+            <tr><td>WEST</td><td>Draxenor</td><td>Shadowfen City</td><td class="right">450,008</td></tr>
+            <tr><td>WEST</td><td>Draxenor</td><td>Darkwater Town</td><td class="right">269,997</td></tr>
+            <tr><td>WEST</td><td>Draxenor</td><td>Blackmarsh Town</td><td class="right">179,995</td></tr>
+
+            <tr><td>WEST</td><td>Falrion</td><td>Silverhold City</td><td class="right">1,100,006</td></tr>
+            <tr><td>WEST</td><td>Falrion</td><td>Brightpeak City</td><td class="right">539,998</td></tr>
+            <tr><td>WEST</td><td>Falrion</td><td>Shimmerbrook Town</td><td class="right">359,996</td></tr>
+
+            <tr><td>WEST</td><td>Regalith</td><td>Cresvane City</td><td class="right">750,003</td></tr>
+            <tr><td>WEST</td><td>Regalith</td><td>Highvale Town</td><td class="right">449,998</td></tr>
+            <tr><td>WEST</td><td>Regalith</td><td>Stonebay Town</td><td class="right">299,999</td></tr>
+
+            <!-- NORTH -->
+            <tr><td>NORTH</td><td>Northaven</td><td>Frostwall City</td><td class="right">400,002</td></tr>
+            <tr><td>NORTH</td><td>Northaven</td><td>Aurora City</td><td class="right">239,999</td></tr>
+            <tr><td>NORTH</td><td>Northaven</td><td>Snowglen Town</td><td class="right">159,999</td></tr>
+
+            <tr><td>NORTH</td><td>Montelune</td><td>Mooncrest City</td><td class="right">300,001</td></tr>
+            <tr><td>NORTH</td><td>Montelune</td><td>Starhaven Town</td><td class="right">179,999</td></tr>
+            <tr><td>NORTH</td><td>Montelune</td><td>Mistpeak Town</td><td class="right">119,998</td></tr>
+
+            <tr><td>NORTH</td><td>Basilion</td><td>Cresvane City</td><td class="right">350,004</td></tr>
+            <tr><td>NORTH</td><td>Basilion</td><td>Oakenshade City</td><td class="right">209,997</td></tr>
+            <tr><td>NORTH</td><td>Basilion</td><td>Stonefield Town</td><td class="right">139,999</td></tr>
+
+            <tr><td>NORTH</td><td>Aethelburg</td><td>Falcrest City</td><td class="right">350,005</td></tr>
+            <tr><td>NORTH</td><td>Aethelburg</td><td>Skyhold City</td><td class="right">209,996</td></tr>
+            <tr><td>NORTH</td><td>Aethelburg</td><td>Ironridge Town</td><td class="right">139,999</td></tr>
+
+            <tr><td>NORTH</td><td>Sylvaren</td><td>Leafmere City</td><td class="right">300,006</td></tr>
+            <tr><td>NORTH</td><td>Sylvaren</td><td>Willowbend Town</td><td class="right">179,997</td></tr>
+            <tr><td>NORTH</td><td>Sylvaren</td><td>Northpine Town</td><td class="right">119,997</td></tr>
+
+            <tr><td>NORTH</td><td>Jaeyara</td><td>Jaeyara City</td><td class="right">300,008</td></tr>
+            <tr><td>NORTH</td><td>Jaeyara</td><td>Auroravale Town</td><td class="right">179,995</td></tr>
+            <tr><td>NORTH</td><td>Jaeyara</td><td>Marigold Town</td><td class="right">119,997</td></tr>
+
+            <tr><td>NORTH</td><td>Andriel</td><td>Andriel City</td><td class="right">300,003</td></tr>
+            <tr><td>NORTH</td><td>Andriel</td><td>Edenvale Town</td><td class="right">179,999</td></tr>
+            <tr><td>NORTH</td><td>Andriel</td><td>Westgrove Town</td><td class="right">119,998</td></tr>
+
+            <!-- EAST -->
+            <tr><td>EAST</td><td>Orinthal</td><td>Goldspire City</td><td class="right">550,002</td></tr>
+            <tr><td>EAST</td><td>Orinthal</td><td>Sunpeak City</td><td class="right">269,999</td></tr>
+            <tr><td>EAST</td><td>Orinthal</td><td>Brightfort Town</td><td class="right">179,999</td></tr>
+
+            <tr><td>EAST</td><td>Eastria</td><td>Eastria City</td><td class="right">450,007</td></tr>
+            <tr><td>EAST</td><td>Eastria</td><td>Dawncrest Town</td><td class="right">269,997</td></tr>
+            <tr><td>EAST</td><td>Eastria</td><td>Eastbrook Town</td><td class="right">179,996</td></tr>
+
+            <tr><td>EAST</td><td>Luminaris</td><td>Crystalhold City</td><td class="right">450,006</td></tr>
+            <tr><td>EAST</td><td>Luminaris</td><td>Frostlight City</td><td class="right">269,998</td></tr>
+            <tr><td>EAST</td><td>Luminaris</td><td>Lightbrook Town</td><td class="right">179,996</td></tr>
+
+            <tr><td>EAST</td><td>Aurelthia</td><td>Moonspire City</td><td class="right">300,004</td></tr>
+            <tr><td>EAST</td><td>Aurelthia</td><td>Silvermoon Town</td><td class="right">179,999</td></tr>
+            <tr><td>EAST</td><td>Aurelthia</td><td>Starwatch Town</td><td class="right">119,997</td></tr>
+
+            <tr><td>EAST</td><td>Eldrosia</td><td>Raventon City</td><td class="right">660,005</td></tr>
+            <tr><td>EAST</td><td>Eldrosia</td><td>Whitethorn Town</td><td class="right">323,998</td></tr>
+            <tr><td>EAST</td><td>Eldrosia</td><td>Stonebriar Town</td><td class="right">215,997</td></tr>
+
+            <tr><td>EAST</td><td>Gravenor</td><td>Stonewall City</td><td class="right">450,003</td></tr>
+            <tr><td>EAST</td><td>Gravenor</td><td>Darkstone Town</td><td class="right">269,999</td></tr>
+            <tr><td>EAST</td><td>Gravenor</td><td>Flintmarch Town</td><td class="right">179,998</td></tr>
+
+            <tr><td>EAST</td><td>Aquaris</td><td>Brightwater City</td><td class="right">550,001</td></tr>
+            <tr><td>EAST</td><td>Aquaris</td><td>Lighthaven City</td><td class="right">270,002</td></tr>
+            <tr><td>EAST</td><td>Aquaris</td><td>Blueford Town</td><td class="right">179,997</td></tr>
+
+            <!-- SOUTH -->
+            <tr><td>SOUTH</td><td>Southmere</td><td>Briswick City</td><td class="right">900,003</td></tr>
+            <tr><td>SOUTH</td><td>Southmere</td><td>Willowmere Town</td><td class="right">539,999</td></tr>
+            <tr><td>SOUTH</td><td>Southmere</td><td>Maplehurst Town</td><td class="right">359,998</td></tr>
+
+            <tr><td>SOUTH</td><td>Starella</td><td>Rosengarde City</td><td class="right">700,005</td></tr>
+            <tr><td>SOUTH</td><td>Starella</td><td>Petalford Town</td><td class="right">419,997</td></tr>
+            <tr><td>SOUTH</td><td>Starella</td><td>Verdantia Town</td><td class="right">279,998</td></tr>
+
+            <tr><td>SOUTH</td><td>Solara</td><td>Solara City</td><td class="right">750,004</td></tr>
+            <tr><td>SOUTH</td><td>Solara</td><td>Breezefall Town</td><td class="right">449,997</td></tr>
+            <tr><td>SOUTH</td><td>Solara</td><td>Oakwind Town</td><td class="right">299,999</td></tr>
+
+            <tr><td>SOUTH</td><td>Velandor</td><td>Velandor City</td><td class="right">600,001</td></tr>
+            <tr><td>SOUTH</td><td>Velandor</td><td>Skyridge Town</td><td class="right">359,999</td></tr>
+            <tr><td>SOUTH</td><td>Velandor</td><td>Windshire Town</td><td class="right">239,998</td></tr>
+
+            <tr><td>SOUTH</td><td>Britonvale</td><td>Brightfield City</td><td class="right">447,874</td></tr>
+            <tr><td>SOUTH</td><td>Britonvale</td><td>Mistvale Town</td><td class="right">268,724</td></tr>
+            <tr><td>SOUTH</td><td>Britonvale</td><td>Stormford Town</td><td class="right">179,150</td></tr>
+
+            <tr><td>SOUTH</td><td>Gabrielis</td><td>Gabrielis City</td><td class="right">600,002</td></tr>
+            <tr><td>SOUTH</td><td>Gabrielis</td><td>Horizon Bay City</td><td class="right">359,997</td></tr>
+            <tr><td>SOUTH</td><td>Gabrielis</td><td>Eastsun Town</td><td class="right">239,999</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // simple filter by typing in search box
+    function filterTable(){
+      const q = document.getElementById('q').value.trim().toLowerCase();
+      const tbody = document.querySelector('#popTable tbody');
+      const rows = tbody.querySelectorAll('tr');
+      rows.forEach(r=>{
+        const text = r.innerText.toLowerCase();
+        r.style.display = text.includes(q) ? '' : 'none';
+      });
+    }
+
+    // Collapse / expand cards
+    function toggleCard(btn){
+      const card = btn.closest('.card');
+      const ul = card.querySelector('ul');
+      if(ul.style.display === 'none'){
+        ul.style.display = '';
+        btn.textContent = 'collapse';
+      } else {
+        ul.style.display = 'none';
+        btn.textContent = 'expand';
+      }
+    }
+
+    // Enable clicking table headers to sort by column (basic)
+    (function enableSorting(){
+      const table = document.getElementById('popTable');
+      const ths = table.querySelectorAll('thead th');
+      ths.forEach((th, idx)=>{
+        th.style.cursor = 'pointer';
+        th.addEventListener('click', ()=>{
+          sortTableByColumn(table, idx);
+        });
+      });
+
+      function sortTableByColumn(table, colIdx){
+        const tbody = table.tBodies[0];
+        const rows = Array.from(tbody.querySelectorAll('tr'));
+        const isNumberCol = colIdx === 3;
+        const asc = ths[colIdx].dataset.asc !== 'true';
+        rows.sort((a,b)=>{
+          const aText = a.cells[colIdx].innerText.replace(/[, ]/g,'');
+          const bText = b.cells[colIdx].innerText.replace(/[, ]/g,'');
+          if(isNumberCol){
+            return asc ? (Number(aText) - Number(bText)) : (Number(bText) - Number(aText));
+          } else {
+            return asc ? aText.localeCompare(bText) : bText.localeCompare(aText);
+          }
+        });
+        // reflow
+        rows.forEach(r => tbody.appendChild(r));
+        // toggle asc flag
+        ths[colIdx].dataset.asc = asc;
+      }
+    })();
+
+  </script>
+</body>
+</html>
