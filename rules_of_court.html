@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚖️ The Rules of Court of the Imperial Sovereign of Bristevia</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Variables for Dark Theme (consistent with other pages) */
+        :root {
+            --navy: #1f2340;
+            --gold: #c8a84a;
+            --cream: #f6f3ee;
+            --text: #f3efe8;
+            --panel: #0f1628; /* Darker panel background */
+            --divider: rgba(200, 168, 74, 0.2);
+        }
+
+        /* Override body styles for this page's dark theme */
+        body {
+            background: linear-gradient(180deg, var(--navy) 0%, #111426 100%);
+            color: var(--text);
+            padding: 0;
+        }
+
+        /* Main Grid Layout for Sticky TOC */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr; /* Sidebar width and main content */
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Sticky Table of Contents (TOC) */
+        .toc-panel {
+            position: sticky;
+            top: 20px; /* Space from the top when scrolled */
+            height: fit-content;
+            background-color: var(--panel);
+            border: 1px solid var(--divider);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .toc-panel h2 {
+            color: var(--gold);
+            margin-top: 0;
+            border-bottom: 1px solid var(--divider);
+            padding-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .toc-panel ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-panel ul li {
+            margin: 8px 0;
+        }
+
+        .toc-panel ul li a {
+            color: var(--text);
+            font-size: 0.95em;
+            transition: color 0.2s;
+        }
+
+        .toc-panel ul li a:hover {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Main Rule Content Styling */
+        .rule-content {
+            padding-right: 20px;
+        }
+
+        .rule-content h2 {
+            color: var(--gold);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+
+        .rule-content h3 {
+            color: var(--gold);
+            font-size: 1.2em;
+            margin-top: 25px;
+        }
+
+        .preamble, .final-note {
+            font-style: italic;
+            border-left: 5px solid var(--gold);
+            padding-left: 15px;
+            margin: 20px 0;
+        }
+
+        .rule-list {
+            list-style-type: decimal;
+            padding-left: 30px;
+        }
+
+        .rule-list li {
+            margin-bottom: 15px;
+        }
+
+        .sub-list {
+            list-style-type: lower-alpha;
+            margin-top: 10px;
+        }
+
+        .divider {
+            border: none;
+            height: 1px;
+            background-color: var(--divider);
+            margin: 30px 0;
+        }
+
+        /* Media Query for smaller screens (removes sticky sidebar) */
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .toc-panel {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚖️ THE RULES OF COURT OF THE IMPERIAL SOVEREIGN OF BRISTEVIA ⚖️</h1>
+        <h2>(R.C.–ISB)</h2>
+        <p>Promulgated by the Supreme Tribunal of the Empire of Bristevia</p>
+    </header>
+
+    <div class="content-grid">
+        <div class="toc-panel">
+            <h2>Table of Contents</h2>
+            <ul>
+                <li><a href="#preamble">Preamble</a></li>
+                <li><a href="#book-1">BOOK I — GENERAL PROVISIONS</a></li>
+                <li><a href="#book-2">BOOK II — CIVIL PROCEDURE</a></li>
+                <li><a href="#book-3">BOOK III — CRIMINAL PROCEDURE</a></li>
+                <li><a href="#book-4">BOOK IV — APPELLATE PROCEDURE</a></li>
+                <li><a href="#book-5">BOOK V — SPECIAL PROCEEDINGS</a></li>
+                <li><a href="#book-6">BOOK VI — FINAL PROVISIONS</a></li>
+                <li><a href="#book-7">BOOK VII — RULES ON EVIDENCE</a></li>
+                <li><a href="#book-8">BOOK VIII — JUDICIAL DISCIPLINE AND CONDUCT</a></li>
+                <li><a href="#book-9-bar">BOOK IX — REGULATION OF COUNSEL AND THE BAR</a></li>
+                <li><a href="#book-10-admin">BOOK X — COURT ADMINISTRATION AND PROCEDURE</a></li>
+                <li><a href="#book-9-docketing">BOOK IX — DOCKETING, FILING, AND REGISTRY OF CASES</a></li>
+                <li><a href="#book-10-final">BOOK X — FINAL AND TRANSITORY PROVISIONS</a></li>
+                <li><a href="#book-11">BOOK XI — SPECIAL COURTS AND DIVISIONS</a></li>
+                <li><a href="#book-12">BOOK XII — CONFLICT OF LAWS</a></li>
+                <li><a href="#book-13">BOOK XIII — ETHICS AND CONDUCT OF COURT STAFF</a></li>
+                <li><a href="#book-14-statutes">BOOK XIV — SUPREME TRIBUNAL STATUTES...</a></li>
+                <li><a href="#book-15-sovereign">BOOK XIV — SUBMISSION OF MATTERS BY THE SOVEREIGN</a></li>
+                <li><a href="#signatures">Signatures</a></li>
+            </ul>
+        </div>
+
+        <main class="rule-content">
+            <p style="text-align: center; font-weight: bold; margin-bottom: 40px;">
+                By Authority of the Constitution, Article VIII, Sections 7 and 11
+            </p>
+
+            <section id="preamble">
+                <h2>PREAMBLE</h2>
+                <div class="preamble">
+                    <p>By the Sovereign Mandate vested in the Supreme Tribunal under the Constitution of the Imperial Sovereign of Bristevia, these Rules of Court are hereby promulgated for the fair, impartial, and orderly administration of justice throughout the Empire.</p>
+                    <p>These rules shall govern all courts of law, from the Supreme Tribunal down to the Regional and Local Courts, and shall ensure that every subject of the Empire is afforded due process under the protection of the Eternal Crown and Imperial Law.</p>
+                </div>
+                <hr class="divider">
+            </section>
+
+            <section id="book-1">
+                <h2>BOOK I — GENERAL PROVISIONS</h2>
+                
+                <h3>Rule 1. Title and Applicability</h3>
+                <ol class="rule-list">
+                    <li>These rules shall be known and cited as the Rules of Court of the Imperial Sovereign of Bristevia (R.C.–ISB).</li>
+                    <li>They shall apply to all cases, civil, criminal, administrative, and special, filed before any court of the Empire unless otherwise provided by law or rule.</li>
+                </ol>
+
+                <h3>Rule 2. Construction</h3>
+                <ol class="rule-list">
+                    <li>These rules shall be liberally construed to secure a just, speedy, and inexpensive disposition of every action.</li>
+                    <li>In the interpretation of these rules, the courts shall be guided by the spirit of fairness, equity, and the protection of the Imperial Constitution.</li>
+                </ol>
+                
+                <h3>Rule 3. Judicial Hierarchy</h3>
+                <ol class="rule-list">
+                    <li>The courts of Bristevia shall be organized as follows:
+                        <ul class="sub-list">
+                            <li>(a) The Supreme Tribunal (ST) — the court of last resort.</li>
+                            <li>(b) Special Courts (SCA) — appellate courts for Administrative, Civil , Family, Criminal, Military, and Commercial Matters.</li>
+                            <li>(c) Regional Courts (RC) — trial courts of general jurisdiction.</li>
+                        </ul>
+                    </li>
+                    <li>Decisions of lower courts are subject to appeal or review in accordance with these rules.</li>
+                </ol>
+
+                <h3>Rule 4. Language and Form</h3>
+                <ol class="rule-list">
+                    <li>All pleadings, judgments, and orders shall be written in the Imperial Common Tongue (High Bristevian).</li>
+                    <li>Courts may, in their discretion, permit translations for public understanding.</li>
+                    <li>All judgments shall bear the seal and authority of the Eternal Crown.</li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="book-2">
+                <h2>BOOK II — CIVIL PROCEDURE</h2>
+                
+                <h3>Rule 5. Commencement of Action</h3>
+                <ol class="rule-list">
+                    <li>A civil action is commenced by the filing of a verified complaint with the proper court, accompanied by the required docket fee.</li>
+                    <li>The complaint shall state the names and residences of the parties and a concise statement of the cause of action.</li>
+                </ol>
+                
+                <h3>Rule 6. Service and Summons</h3>
+                <ol class="rule-list">
+                    <li>Upon filing, the court shall issue a summons to the defendant, requiring an answer within fifteen (15) days.</li>
+                    <li>Service may be personal, by registered post, or by official courier under seal.</li>
+                </ol>
+
+                <h3>Rule 7. Pleadings</h3>
+                <ol class="rule-list">
+                    <li>Pleadings allowed:
+                        <ul class="sub-list">
+                            <li>(a) Complaint;</li>
+                            <li>(b) Answer;</li>
+                            <li>(c) Counterclaim or Cross-claim;</li>
+                            <li>(d) Reply.</li>
+                        </ul>
+                    </li>
+                    <li>Every pleading must be verified and signed by the party or counsel.</li>
+                </ol>
+
+                <h3>Rule 8. Motions</h3>
+                <ol class="rule-list">
+                    <li>All motions shall be in writing, state the grounds clearly, and be served on the opposing party.</li>
+                    <li>Oral motions are not allowed except those made during open trial.</li>
+                </ol>
+
+                <h3>Rule 9. Judgment</h3>
+                <ol class="rule-list">
+                    <li>Judgment shall be rendered within ninety (90) days after submission.</li>
+                    <li>It shall clearly state the facts, issues, and conclusions of law.</li>
+                </ol>
+
+                <h3>Rule 10. Execution</h3>
+                <ol class="rule-list">
+                    <li>A final judgment may be executed by writ issued under the seal of the court.</li>
+                    <li>No execution shall issue until after fifteen (15) days from notice of judgment unless ordered immediately by reason of urgency or public interest.</li>
+                </ol>
+                <hr class="divider">
+            </section>
+            
+            <section id="book-3">
+                <h2>BOOK III — CRIMINAL PROCEDURE</h2>
+
+                <h3>Rule 11. Prosecution of Offenses</h3>
+                <ol class="rule-list">
+                    <li>All criminal actions shall be prosecuted in the name of the **People of Bristevia**, under the authority of the Imperial Prosecutor-General.</li>
+                    <li>No person shall be tried except upon a valid information or complaint.</li>
+                </ol>
+
+                <h3>Rule 12. Rights of the Accused</h3>
+                <ol class="rule-list">
+                    <li>In all criminal prosecutions, the accused shall be presumed innocent until proven guilty beyond reasonable doubt.</li>
+                    <li>The accused shall have the right:
+                        <ul class="sub-list">
+                            <li>(a) To be informed of the nature and cause of the accusation;</li>
+                            <li>(b) To counsel and to remain silent;</li>
+                            <li>(c) To a speedy and public trial;</li>
+                            <li>(d) To confront witnesses;</li>
+                            <li>(e) To appeal judgments to higher courts.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Rule 13. Arraignment and Plea</h3>
+                <ol class="rule-list">
+                    <li>The accused shall be arraigned in open court, and the charge read to him in a language he understands.</li>
+                    <li>The plea shall be entered clearly and voluntarily.</li>
+                </ol>
+
+                <h3>Rule 14. Trial</h3>
+                <ol class="rule-list">
+                    <li>Trial shall proceed day to day until completed.</li>
+                    <li>The prosecution shall present evidence first, followed by the defense.</li>
+                </ol>
+
+                <h3>Rule 15. Judgment and Sentence</h3>
+                <ol class="rule-list">
+                    <li>Judgment shall state clearly whether the accused is guilty or acquitted.</li>
+                    <li>Sentences shall conform to the Imperial Penal Code and shall bear the approval of the presiding justice.</li>
+                </ol>
+                <hr class="divider">
+            </section>
+            
+            <section id="book-4">
+                <h2>BOOK IV — APPELLATE PROCEDURE</h2>
+
+                <h3>Rule 16. Appeals</h3>
+                <ol class="rule-list">
+                    <li>Appeals may be taken from judgments of lower courts to the next higher court within fifteen (15) days.</li>
+                    <li>Appeals to the Supreme Tribunal shall only involve questions of law, constitutional issues, or matters of Imperial concern.</li>
+                </ol>
+
+                <h3>Rule 17. Petition for Review</h3>
+                <ol class="rule-list">
+                    <li>The Supreme Tribunal may, on petition, review cases in the interest of justice, even without formal appeal.</li>
+                    <li>Such petitions must show compelling merit or grave abuse of discretion by lower courts.</li>
+                </ol>
+                <hr class="divider">
+            </section>
+            
+            <section id="book-5">
+                <h2>BOOK V — SPECIAL PROCEEDINGS</h2>
+
+                <h3>Rule 18. Writs and Remedies</h3>
+                <p>The Supreme Tribunal may issue, upon proper petition:</p>
+                <ol class="rule-list" style="list-style-type: upper-roman;">
+                    <li>Writ of Habeas Corpus — for unlawful detention;</li>
+                    <li>Writ of Mandamus — to compel a lawful duty;</li>
+                    <li>Writ of Certiorari — to correct jurisdictional errors;</li>
+                    <li>Writ of Prohibition — to restrain unlawful judicial acts;</li>
+                    <li>Writ of Amparo — to protect constitutional rights and personal liberty.</li>
+                </ol>
+                <hr class="divider">
+            </section>
+            
+            <section id="book-6">
+                <h2>BOOK VI — FINAL PROVISIONS</h2>
+
+                <h3>Rule 19. Repeal and Effectivity</h3>
+                <ol class="rule-list">
+                    <li>All prior inconsistent rules or regulations are hereby repealed or modified.</li>
+                    <li>These Rules shall take effect thirty (30) days after publication in the Imperial Gazette of Bristevia.</li>
+                </ol>
+
+                <h3>Rule 20. Authority</h3>
+                <p>These Rules are issued by authority of the Supreme Tribunal of the Empire, by virtue of the powers granted under Article VIII, Sections 7 and 11 of the Constitution of the Imperial Sovereign of Bristevia, and under the seal of the Eternal Crown.</p>
+                <hr class="divider">
+            </section>
+            
+            <section id="book-7">
+                <h2>BOOK VII — RULES ON EVIDENCE</h2>
+
+                <h3>Rule 21. General Principles</h3>
+                <ol class="rule-list">
+                    <li>No evidence shall be admissible except as provided by these rules or other Imperial laws.</li>
+                    <li>All facts must be established by competent, relevant, and material evidence.</li>
+                </ol>
+
+                <h3>Rule 22. Documentary Evidence</h3>
+                <ol class="rule-list">
+                    <li>All documents offered as evidence must be original or certified true copies.</li>
+                    <li>Documents must be properly authenticated with signature and seal.</li>
+                </ol>
+
+                <h3>Rule 23. Oral Testimony</h3>
+                <ol class="rule-list">
+                    <li>Witnesses shall testify under oath or affirmation, administered in accordance with Imperial ceremonial law.</li>
+                    <li>Leading questions are permitted only on cross-examination.</li>
+                </ol>
+
+                <h3>Rule 24. Presumptions</h3>
+                <ol class="rule-list">
+                    <li>Courts shall recognize presumptions of fact or law as provided in the Imperial Civil Code and other statutes.</li>
+                    <li>Rebuttable presumptions may be contested by contrary evidence; irrebuttable presumptions are conclusive.</li>
+                </ol>
+
+                <h3>Rule 25. Privileged Communications</h3>
+                <ol class="rule-list">
+                    <li>Communications between counsel and client, spiritual confessor and penitent, and doctor and patient shall be absolutely privileged.</li>
+                    <li>Privileged evidence cannot be compelled without express consent of the concerned party.</li>
+                </ol>
+
+                <h3>Rule 26. Burden of Proof</h3>
+                <ol class="rule-list">
+                    <li>In civil cases, the burden rests on the plaintiff to prove the claim by preponderance of evidence.</li>
+                    <li>In criminal cases, the prosecution bears the burden of proving guilt beyond reasonable doubt.</li>
+                </ol>
+
+                <h3>Rule 27. Judicial Notice</h3>
+                <ol class="rule-list">
+                    <li>Courts may take notice of facts universally known within the Empire, laws, and official acts of the government, without formal proof.</li>
+                </ol>
+                <hr class="divider">
+            </section>
+            
+            <section id="book-8">
+                <h2>BOOK VIII — JUDICIAL DISCIPLINE AND CONDUCT</h2>
+
+                <h3>Rule 28. Code of Conduct</h3>
+                <ol class="rule-list">
+                    <li>All judges shall uphold integrity, impartiality, and decorum in office.</li>
+                    <li>Judges shall avoid conflicts of interest, and any appearance of bias shall be grounds for recusal.</li>
+                </ol>
+
+                <h3>Rule 29. Disciplinary Proceedings</h3>
+                <ol class="rule-list">
+                    <li>Complaints against judges may be filed with the Judicial Conduct Commission (JCC) of the Empire.</li>
+                    <li>The JCC shall investigate, hold hearings, and may recommend censure, suspension, or removal.</li>
+                </ol>
+
+                <h3>Rule 30. Immunities and Responsibilities</h3>
+                <ol class="rule-list">
+                    <li>Judges are immune from personal liability for judicial acts done in good faith.</li>
+                    <li>Gross negligence, corruption, or abuse of power constitutes dereliction of duty.</li>
+                </ol>
+                <hr class="divider">
+            </section>
+            
+            <section id="book-9-bar">
+                <h2>BOOK IX — REGULATION OF COUNSEL AND THE BAR</h2>
+
+                <h3>Rule 31. Admission to the Bar</h3>
+                <ol class="rule-list">
+                    <li>Only persons admitted to the Imperial Bar may practice law.</li>
+                    <li>Requirements:
+                        <ul class="sub-list">
+                            <li>(a) Graduate of recognized Imperial Law School;</li>
+                            <li>(b) Pass the Imperial Bar Examination;</li>
+                            <li>(c) Swear allegiance to the Eternal Crown and Constitution.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Rule 32. Duties of Counsel</h3>
+                <ol class="rule-list">
+                    <li>Counsel shall uphold justice, respect the court, and avoid frivolous claims or dilatory tactics.</li>
+                    <li>Confidential communications with clients are privileged.</li>
+                </ol>
+
+                <h3>Rule 33. Disciplinary Measures</h3>
+                <ol class="rule-list">
+                    <li>The Imperial Bar Council may investigate complaints against counsel.</li>
+                    <li>Penalties include reprimand, suspension, or permanent disbarment.</li>
+                </ol>
+                <hr class="divider">
+            </section>
+            
+            <section id="book-10-admin">
+                <h2>BOOK X — COURT ADMINISTRATION AND PROCEDURE</h2>
+
+                <h3>Rule 34. Court Sessions</h3>
+                <ol class="rule-list">
+                    <li>Courts shall sit from Monday to Friday, except on Imperial holidays.</li>
+                    <li>Emergency sessions may be convened by the presiding justice.</li>
+                </ol>
+
+                <h3>Rule 35. Filing and Docketing</h3>
+                <ol class="rule-list">
+                    <li>All cases shall be filed in the proper registry, with a unique docket number.</li>
+                    <li>Registries shall maintain permanent records of all filings, pleadings, and judgments.</li>
+                </ol>
+
+                <h3>Rule 36. Fees</h3>
+                <ol class="rule-list">
+                    <li>The Imperial Treasury shall prescribe docket fees, service fees, and other charges.</li>
+                    <li>Fee waivers may be granted for indigent litigants under special petition.</li>
+                </ol>
+
+                <h3>Rule 37. Court Officers</h3>
+                <ol class="rule-list">
+                    <li>Court officers include clerks, bailiffs, court stenographers, and sheriffs.</li>
+                    <li>Officers shall execute duties under the supervision of the presiding judge.</li>
+                </ol>
+
+                <h3>Rule 38. Reports and Transparency</h3>
+                <ol class="rule-list">
+                    <li>Courts shall issue annual reports to the Supreme Tribunal on:
+                        <ul class="sub-list">
+                            <li>Caseload statistics</li>
+                            <li>Pending cases</li>
+                            <li>Appeals and judgments</li>
+                            <li>Administrative recommendations</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Rule 39. Digital Court Proceedings</h3>
+                <ol class="rule-list">
+                    <li>Courts may conduct electronic or virtual hearings, provided:
+                        <ul class="sub-list">
+                            <li>Security and privacy are ensured</li>
+                            <li>Records are preserved in official registries</li>
+                            <li>Parties consent or are properly notified</li>
+                        </ul>
+                    </li>
+                </ol>
+                <hr class="divider">
+            </section>
+            
+            <section id="book-9-docketing">
+                <h2>BOOK IX — DOCKETING, FILING, AND REGISTRY OF CASES</h2>
+                <p style="text-align: center; font-style: italic;">(R.C.–ISB, Rules 40–45)</p>
+
+                <h3>Rule 40. Docketing and Filing of Cases</h3>
+                <ol class="rule-list">
+                    <li>All cases, petitions, or complaints brought before any court of the Empire shall be filed and entered in the official Court Docket.</li>
+                    <li>No judicial action shall proceed unless a case has been duly docketed and assigned a permanent Docket Number.</li>
+                    <li>The Clerk of Court shall record all filings immediately upon receipt, collect the proper fees, and issue a Certificate of Docket Entry bearing the official seal of the court.</li>
+                    <li>Filing may be done in person, by registered courier, or through the Imperial Electronic Docketing System (e-Docket) when available.</li>
+                </ol>
+                
+                <h3>Rule 41. Format and Components of the Docket Number</h3>
+                <ol class="rule-list">
+                    <li>Each case shall bear a unique Docket Number, formatted as follows: <p><strong>[Court Code] – [Case Type Code] – [Sequential Number] – [Year]</strong><br>Example: RC-CR-0231-2025</p></li>
+                    <li>Court Codes:
+                        <ul class="sub-list">
+                            <li>JP — Supreme Tribunal (Jurisprudence)</li>
+                            <li>SCA — Special Court</li>
+                            <li>RC — Regional Court</li>
+                        </ul>
+                    </li>
+                    <li>Case Type Codes:
+                        <ul class="sub-list">
+                            <li>CV — Civil Case</li>
+                            <li>CR — Criminal Case</li>
+                            <li>SP — Special Proceeding</li>
+                            <li>AM — Administrative Matter</li>
+                            <li>AP — Appeal</li>
+                            <li>HC — Habeas Corpus</li>
+                            <li>PR — Probate</li>
+                            <li>DC — Disciplinary or Conduct Case</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="sub-list">
+                            <li>(a) The Sequential Number shall begin at 001 for each calendar year and court.</li>
+                            <li>(b) For Supreme Tribunal, The Sequential Number shall begin at 1. [Court Code -Sequential Number] JP means Jurisprudence.</li>
+                        </ul>
+                    </li>
+                    <li>The Year reflects the date of initial filing.</li>
+                </ol>
+
+                <h3>Rule 42. Docket Book and Registry of Cases</h3>
+                <ol class="rule-list">
+                    <li>Each court shall maintain a Docket Book, either written or electronic, under the custody of the Clerk of Court.</li>
+                    <li>Every entry shall contain the following:
+                        <ul class="sub-list">
+                            <li>(a) Docket Number;</li>
+                            <li>(b) Case Title and Names of Parties;</li>
+                            <li>(c) Nature of Action or Offense;</li>
+                            <li>(d) Date Filed;</li>
+                            <li>(e) Assigned Justice or Division;</li>
+                            <li>(f) Present Status or Final Disposition.</li>
+                        </ul>
+                    </li>
+                    <li>Docket Books shall be preserved as official judicial records, inspected and audited periodically by the Supreme Tribunal or the Judicial Conduct Commission.</li>
+                    <li>Unauthorized alteration, falsification, or erasure of any docket entry constitutes Judicial Misconduct punishable under Imperial law.</li>
+                </ol>
+
+                <h3>Rule 43. Certification, Verification, and Authenticity</h3>
+                <ol class="rule-list">
+                    <li>Upon registration, the Clerk of Court shall issue a Certificate of Docket Entry, stating:
+                        <ul class="sub-list">
+                            <li>The assigned docket number,</li>
+                            <li>The date and time of filing, and</li>
+                            <li>The official seal of the court.</li>
+                        </ul>
+                    </li>
+                    <li>Such certificate shall be prima facie proof of filing and registry.</li>
+                    <li>No summons, writ, or order shall issue in any case not duly docketed.</li>
+                </ol>
+
+                <h3>Rule 44. Electronic Docketing and Central Registry</h3>
+                <ol class="rule-list">
+                    <li>The Empire shall maintain a centralized **Imperial Judicial Information System (IJIS)** to record all docket entries across all courts.</li>
+                    <li>The **Electronic Docket (e-Docket)** shall bear equal legal force as written records.</li>
+                    <li>Each electronic entry shall include digital signatures and time-stamps to ensure authenticity.</li>
+                    <li>All e-Docket records shall be archived permanently within the Imperial Data Archives of Stephara City, under the authority of the Office of the Judicial Administrator (OJA).</li>
+                    <li>Access to the IJIS shall be secured and limited to authorized officers, but public docket inquiry may be permitted for transparency.</li>
+                </ol>
+
+                <h3>Rule 45. Docket Fees and Exemptions</h3>
+                <ol class="rule-list">
+                    <li>The Imperial Treasury, upon recommendation of the Supreme Tribunal, shall prescribe uniform docket and filing fees for all courts.</li>
+                    <li>No filing shall be accepted without payment of the prescribed docket fee unless exempted by law or order.</li>
+                    <li>Indigent litigants may file petitions for Fee Exemption upon showing proof of financial incapacity, verified under oath.</li>
+                    <li>Failure to pay docket fees within the prescribed period shall be ground for dismissal without prejudice.</li>
+                </ol>
+                <hr class="divider">
+            </section>
+            
+            <section id="book-10-final">
+                <h2>BOOK X — FINAL AND TRANSITORY PROVISIONS</h2>
+
+                <h3>Rule 46. Central Oversight and Audit</h3>
+                <ol class="rule-list">
+                    <li>The Office of the Judicial Administrator (OJA) shall monitor all docket issuances, verify their sequence, and detect duplication or irregularity.</li>
+                    <li>Annual docket reports shall be submitted by all courts to the Supreme Tribunal and published in the Imperial Gazette for public accountability.</li>
+                    <li>Any conflict or duplication of docket numbers shall be resolved by official annotation and correction under the authority of the OJA.</li>
+                </ol>
+
+                <h3>Rule 47. Illustrative Table of Docket Classifications</h3>
+                <table style="width:100%; border-collapse: collapse; margin: 20px 0; color: var(--text); background-color: var(--panel);">
+                    <thead>
+                        <tr>
+                            <th style="border: 1px solid var(--divider); padding: 8px; text-align: left; background-color: #1a243a;">Docket No.</th>
+                            <th style="border: 1px solid var(--divider); padding: 8px; text-align: left; background-color: #1a243a;">Case Type</th>
+                            <th style="border: 1px solid var(--divider); padding: 8px; text-align: left; background-color: #1a243a;">Filed Before</th>
+                            <th style="border: 1px solid var(--divider); padding: 8px; text-align: left; background-color: #1a243a;">Example Case Title</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">JP-CV-1</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Civil</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Supreme Tribunal</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Imperial Treasury vs. House of Trion</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">SCA-AP-0088-2025</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Appeal</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Imperial Court of Appeals</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Draxenor Mining Co. vs. Virelion Council</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">RC-CR-0231-2025</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Criminal</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Regional Court</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">People of Bristevia vs. Alric Fenlor</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">PC-SP-0144-2025</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Special Proceeding</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Provincial Court</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Estate of Lady Merenthia</td>
+                        </tr>
+                        <tr>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">LC-AM-0007-2025</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Administrative</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Local Court</td>
+                            <td style="border: 1px solid var(--divider); padding: 8px;">Re: Misconduct of Court Clerk</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Rule 48. Judicial Responsibility</h3>
+                <ol class="rule-list">
+                    <li>The Presiding Judge shall ensure that all docket numbers correspond to properly filed cases and that no proceedings are entertained without valid registration.</li>
+                    <li>Negligence or intentional mishandling of docket records shall subject the responsible officer to disciplinary sanctions under Book VIII (Judicial Discipline).</li>
+                </ol>
+
+                <h3>Rule 49. Transitional Application</h3>
+                <ol class="rule-list">
+                    <li>Cases pending prior to these rules shall continue under the former rules, unless justice requires application of the new rules.</li>
+                </ol>
+
+                <h3>Rule 50. Amendments</h3>
+                <ol class="rule-list">
+                    <li>The Supreme Tribunal, by special resolution, may amend or supplement these Rules of Court.</li>
+                    <li>Amendments shall take effect upon publication in the Imperial Gazette.</li>
+                </ol>
+                <hr class="divider">
+            </section>
+            
+            <section id="book-11">
+                <h2>BOOK XI — SPECIAL COURTS AND DIVISIONS</h2>
+
+                <h3>Rule 51. Special Courts</h3>
+                <ol class="rule-list">
+                    <li>The Empire shall maintain the following Special Courts (**SCA**), each with specific jurisdiction:
+                        <ul class="sub-list">
+                            <li>Family Court — domestic relations, custody, support, adoption, and related matters.</li>
+                            <li>Criminal Court — serious offenses, organized crime, and crimes under the Imperial Penal Code.</li>
+                            <li>Commercial Court — corporate disputes, trade, contracts, bankruptcy, and business-related litigation.</li>
+                            <li>Military Court — offenses involving Imperial Armed Forces personnel and matters of military discipline.</li>
+                            <li>Administrative Court — disputes involving Imperial agencies, public officers, and regulatory compliance.</li>
+                            <li>Civil Court — civil actions requiring special expertise or expedited resolution beyond Regional Court capacity.</li>
+                        </ul>
+                    </li>
+                    <li>Each Special Court shall operate under the general Rules of Court (R.C.–ISB), with supplementary procedural rules tailored to its jurisdiction.</li>
+                    <li>Judges of Special Courts must have expertise relevant to their division; appointments are made by the Supreme Tribunal on recommendation of the Judicial Administrator.</li>
+                    <li>Appeals from Special Courts shall follow the appellate procedure set forth in Book IV.</li>
+                </ol>
+
+                <h3>Rule 52. Divisions and Panels</h3>
+                <ol class="rule-list">
+                    <li>Special Courts may sit in divisions or panels as determined by caseload and jurisdiction.</li>
+                    <li>Each panel must include at least three (3) judges, except in cases where a single judge is expressly authorized by law.</li>
+                    <li>Panel composition shall ensure impartiality, prevent conflicts of interest, and uphold the highest standards of judicial competence.</li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="book-12">
+                <h2>BOOK XII — CONFLICT OF LAWS</h2>
+
+                <h3>Rule 53. General Principles</h3>
+                <ol class="rule-list">
+                    <li>When a dispute involves multiple provinces, regions, or Imperial jurisdictions, the court shall determine the applicable law in accordance with:
+                        <ul class="sub-list">
+                            <li>The Imperial Constitution,</li>
+                            <li>Statutes enacted by the Supreme Tribunal, and</li>
+                            <li>Established Imperial legal principles.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Rule 54. Jurisdictional Conflicts</h3>
+                <ol class="rule-list">
+                    <li>In case of overlapping jurisdiction between Regional or Special Courts, the Supreme Tribunal shall issue binding guidance on forum selection.</li>
+                    <li>Courts shall abstain from hearing cases where jurisdiction is clearly vested in another court, unless authorized by the Supreme Tribunal.</li>
+                </ol>
+
+                <h3>Rule 55. Choice of Law</h3>
+                <ol class="rule-list">
+                    <li>In civil or commercial disputes crossing provincial boundaries, courts shall apply:
+                        <ul class="sub-list">
+                            <li>Law of the place of performance for contracts,</li>
+                            <li>Law of the domicile or nationality for personal matters,</li>
+                            <li>Imperial statutes for matters of national concern.</li>
+                        </ul>
+                    </li>
+                    <li>Parties may stipulate choice of law, provided it does not contravene the Constitution or public policy.</li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="book-13">
+                <h2>BOOK XIII — ETHICS AND CONDUCT OF COURT STAFF</h2>
+
+                <h3>Rule 56. Court Staff Code of Ethics</h3>
+                <ol class="rule-list">
+                    <li>All clerks, bailiffs, stenographers, sheriffs, and other court officers shall uphold:
+                        <ul class="sub-list">
+                            <li>Integrity and honesty,</li>
+                            <li>Impartiality and neutrality,</li>
+                            <li>Confidentiality of court records and proceedings,</li>
+                            <li>Respect for judges, counsel, and parties.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Rule 57. Conflict of Interest</h3>
+                <ol class="rule-list">
+                    <li>Court staff shall recuse themselves from cases in which they, their family, or associates have a direct interest.</li>
+                    <li>Failure to disclose a conflict constitutes grounds for disciplinary action under Book VIII.</li>
+                </ol>
+
+                <h3>Rule 58. Disciplinary Measures for Court Staff</h3>
+                <ol class="rule-list">
+                    <li>Violations of ethical standards may result in:
+                        <ul class="sub-list">
+                            <li>Reprimand,</li>
+                            <li>Suspension,</li>
+                            <li>Termination of service, or</li>
+                            <li>Referral to the Judicial Conduct Commission for further action.</li>
+                        </ul>
+                    </li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="book-14-statutes">
+                <h2>BOOK XIV — SUPREME TRIBUNAL STATUTES AND PROCEDURAL DIRECTIVES</h2>
+
+                <h3>Rule 59. Authority to Enact Statutes</h3>
+                <ol class="rule-list">
+                    <li>Under the Constitution of the Imperial Sovereign of Bristevia, the Supreme Tribunal may, by resolution, enact binding Statutes and Procedural Directives for the orderly administration of justice throughout the Empire.</li>
+                    <li>Such Statutes shall have force of law and shall apply to all courts, judges, counsel, and parties, subordinate to the Constitution.</li>
+                    <li>These Statutes are supplementary to the Rules of Court (R.C.–ISB) and other Imperial laws.</li>
+                </ol>
+
+                <h3>Rule 60. Scope and Application</h3>
+                <ol class="rule-list">
+                    <li>Statutes and Directives may cover:
+                        <ul class="sub-list">
+                            <li>Jurisdiction and procedural rules for Special and Regional Courts.</li>
+                            <li>Conflict-of-law matters between provinces, regions, or courts.</li>
+                            <li>Standardization of filing, docketing, and electronic court procedures.</li>
+                            <li>Interpretation and application of Imperial Codes.</li>
+                        </ul>
+                    </li>
+                    <li>Courts shall strictly follow these Statutes, except when the Constitution or enacted law provides otherwise.</li>
+                </ol>
+
+                <h3>Rule 61. Enactment Procedure</h3>
+                <ol class="rule-list">
+                    <li>Drafting: Any Justice or authorized panel may propose a Statute or Directive.</li>
+                    <li>Deliberation & Approval: The full Supreme Tribunal shall deliberate and approve the measure by formal resolution.</li>
+                    <li>Promulgation: Once approved, the Statute is signed, sealed with the Eternal Crown, and published in the Imperial Gazette.</li>
+                    <li>Effective Date: A Statute becomes effective either immediately upon publication or on a date specified in the Statute.</li>
+                </ol>
+
+                <h3>Rule 62. Publication and Public Notice</h3>
+                <ol class="rule-list">
+                    <li>All enacted Statutes and Procedural Directives must be published in the Imperial Gazette of Bristevia for official notice.</li>
+                    <li>Judges, court staff, and counsel are presumed to have knowledge of all published Statutes from the date of publication.</li>
+                </ol>
+
+                <h3>Rule 63. Enforcement and Compliance</h3>
+                <ol class="rule-list">
+                    <li>Lower courts shall implement and comply with all Supreme Tribunal Statutes in all relevant cases.</li>
+                    <li>Non-compliance, negligence, or willful disregard of a Supreme Tribunal Statute constitutes judicial misconduct, subject to Book VIII (Judicial Discipline and Conduct).</li>
+                    <li>The Office of the Judicial Administrator shall monitor implementation and may issue guidance to ensure uniform compliance.</li>
+                </ol>
+
+                <h3>Rule 64. Amendments and Repeal</h3>
+                <ol class="rule-list">
+                    <li>Statutes enacted by the Supreme Tribunal may be amended or repealed by subsequent resolutions of the Tribunal.</li>
+                    <li>Amendments or repeals shall be published in the Imperial Gazette and shall have immediate or specified effect as directed.</li>
+                </ol>
+
+                <section id="book-15-sovereign">
+                    <h2>BOOK XIV — SUBMISSION OF MATTERS BY THE SOVEREIGN TO THE SUPREME TRIBUNAL</h2>
+                    <h3>Rule 65. Submission of Matters by the Sovereign to the Supreme Tribunal</h3>
+                    <ol class="rule-list">
+                        <li>The Supreme Tribunal will only entertain Actual Cases or Controversies but The Sovereign of Bristevia may, in the interest of justice, submit questions, disputes, or proposed acts for advisory review or formal adjudication by the Supreme Tribunal.</li>
+                        <li>Submissions shall be made in writing, through the Office of the Judicial Administrator, and shall bear the seal of the Eternal Crown.</li>
+                        <li>The Supreme Tribunal shall:
+                            <ul class="sub-list">
+                                <li>Examine the matter under the Constitution and Imperial laws;</li>
+                                <li>Render an opinion, resolution, or judgment; and</li>
+                                <li>Issue directives or declarations binding on all courts, officials, and subjects of the Empire.</li>
+                            </ul>
+                        </li>
+                        <li>This procedure shall not derogate from the Sovereign’s powers under the Constitution but ensures that all acts conform to Imperial Law and the protection of subjects’ rights.</li>
+                    </ol>
+                </section>
+                <hr class="divider">
+            </section>
+
+            <section id="signatures" style="text-align: center; margin-top: 50px;">
+                <p>Signed and Promulgated<br>
+                At Stephara City, Capital of the Empire of Bristevia,<br>
+                This ___ day of __________, in the Year of the Eternal Crown _____.</p>
+                <p style="font-weight: bold; margin-top: 30px;">BY ORDER OF THE SUPREME TRIBUNAL</p>
+                <p>
+                    ✒️ Chief Justice Jay Britney Balbin<br>
+                    ✒️ Associate Justices<br>
+                    Andrea Estomago, Ronjie Estomago, Gabriel Estomago, Jaeya Brielle Balbin, Niccolo Machiavelli, Robert Greene, Zhuge Liang, Marcus Aurelius
+                </p>
+                <p style="font-style: italic;">(Seal of the Supreme Tribunal)</p>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
