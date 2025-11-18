@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚜️ Bristevia Local Government Code ⚜️</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Variables for Dark Theme (consistent with other legal pages) */
+        :root {
+            --navy: #1f2340;
+            --gold: #c8a84a;
+            --text: #f3efe8;
+            --panel: #0f1628; /* Darker panel background */
+            --divider: rgba(200, 168, 74, 0.2);
+            --article-num: #8b6e36; /* Muted gold for article numbers */
+        }
+
+        /* Override body styles for this page's dark theme */
+        body {
+            background: linear-gradient(180deg, var(--navy) 0%, #111426 100%);
+            color: var(--text);
+            padding: 0;
+        }
+
+        header h1 {
+            color: var(--gold);
+        }
+
+        /* Main Grid Layout for Sticky TOC */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr; /* Sidebar width and main content */
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Sticky Table of Contents (TOC) */
+        .toc-panel {
+            position: sticky;
+            top: 20px; /* Space from the top when scrolled */
+            height: fit-content;
+            background-color: var(--panel);
+            border: 1px solid var(--divider);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .toc-panel h2 {
+            color: var(--gold);
+            margin-top: 0;
+            border-bottom: 1px solid var(--divider);
+            padding-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .toc-panel ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-panel ul li {
+            margin: 8px 0;
+        }
+
+        .toc-panel ul li a {
+            color: var(--text);
+            font-size: 0.95em;
+            transition: color 0.2s;
+        }
+
+        .toc-panel ul li a:hover {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Main Rule Content Styling */
+        .rule-content {
+            padding-right: 20px;
+        }
+
+        .rule-content h2.title {
+            color: var(--gold);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+
+        .section-header {
+            color: var(--gold);
+            font-size: 1.3em;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .article {
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 3px solid var(--gold);
+            background-color: rgba(15, 22, 40, 0.4); /* Slightly lighter background for articles */
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .article-title {
+            font-weight: bold;
+            color: var(--article-num);
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .article p, .article ul, .article ol {
+            margin-bottom: 10px;
+        }
+
+        .article ul {
+            list-style-type: disc;
+            padding-left: 25px;
+        }
+        .article ol {
+            padding-left: 25px;
+        }
+
+        .divider-short {
+            border: none;
+            height: 1px;
+            background-color: var(--divider);
+            margin: 20px 0;
+        }
+
+        .data-table-container {
+            margin-top: 30px;
+            overflow-x: auto;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            min-width: 800px; /* Ensures it doesn't compress too much */
+        }
+
+        .data-table th, .data-table td {
+            border: 1px solid var(--divider);
+            padding: 10px;
+            text-align: left;
+        }
+
+        .data-table thead th {
+            background-color: var(--navy);
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .notes {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px dashed var(--gold);
+            background-color: rgba(200, 168, 74, 0.05);
+            border-radius: 5px;
+        }
+
+        /* Media Query for smaller screens (removes sticky sidebar) */
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .toc-panel {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚜️ BRISTEVIA LOCAL GOVERNMENT CODE ⚜️</h1>
+    </header>
+
+    <div class="content-grid">
+        <div class="toc-panel">
+            <h2>Code Outline</h2>
+            <ul>
+                <li><a href="#preamble">Preamble</a></li>
+                <li><a href="#title1">TITLE I — GENERAL PROVISIONS</a></li>
+                <li><a href="#title2">TITLE II — STRUCTURE</a></li>
+                <li><a href="#title3">TITLE III — POWERS AND FUNCTIONS</a></li>
+                <li><a href="#title4">TITLE IV — PLANNING AND DEVELOPMENT</a></li>
+                <li><a href="#title5">TITLE V — ACCOUNTABILITY AND OVERSIGHT</a></li>
+                <li><a href="#title6">TITLE VI — TRANSITION AND IMPLEMENTATION</a></li>
+                <li><a href="#title7">TITLE VII — MISCELLANEOUS PROVISIONS</a></li>
+                <li><a href="#table">LGU Operational Table</a></li>
+            </ul>
+        </div>
+
+        <main class="rule-content">
+            <section id="preamble">
+                <h2 class="title">Preamble</h2>
+                <p>We, the people of the Empire of Bristevia, in order to promote local **autonomy**, encourage participatory governance, ensure efficient delivery of basic services, and uphold **transparency and accountability**, enact this Local Government Code to guide the organization, powers, and responsibilities of local government units across the Imperial Realm.</p>
+            </section>
+            
+            <hr class="divider-short">
+
+            <section id="title1">
+                <h2 class="title">TITLE I — GENERAL PROVISIONS</h2>
+
+                <div class="article" id="chap1">
+                    <h3 class="section-header">Chapter 1 — Definition of Terms</h3>
+                    <ol>
+                        <li>**Local Government Unit (LGU)** — refers to the provinces, cities, municipalities (town), and communities within Bristevia.</li>
+                        <li>**Governor / Mayor / Community Chief** — the chief executive officer of the respective LGU.</li>
+                        <li>**Provincial Council / City Council / Municipal or Council / Community Council** — the legislative body of the LGU.</li>
+                        <li>**Local Development Council (LDC)** — a body composed of LGU officials and sectoral representatives that formulates development plans and programs.</li>
+                        <li>**Autonomy** — the power of an LGU to govern its affairs independently within the limits of national law.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <hr class="divider-short">
+
+            <section id="title2">
+                <h2 class="title">TITLE II — STRUCTURE OF LOCAL GOVERNMENT</h2>
+
+                <div class="article" id="chap2">
+                    <h3 class="section-header">Chapter 2 — Levels of Local Government</h3>
+                    <ol>
+                        <li>**Provinces**
+                            <ul>
+                                <li>Each province is headed by a **Governor** and a **Provincial Council**.</li>
+                                <li>Provinces coordinate inter-municipal programs and provide technical assistance to municipalities and communities.</li>
+                            </ul>
+                        </li>
+                        <li>**Cities**
+                            <ul>
+                                <li>Cities may be **1st class** or **2nd class** cities.</li>
+                                <li>Each city is headed by a **City Mayor** and a **City Council**.</li>
+                            </ul>
+                        </li>
+                        <li>**Municipalities**
+                            <ul>
+                                <li>Municipalities are headed by a **Municipal Mayor** and a **Municipal Council**.</li>
+                                <li>Municipalities coordinate local services, infrastructure, and community programs.</li>
+                            </ul>
+                        </li>
+                        <li>**Communities**
+                            <ul>
+                                <li>The smallest LGU unit, headed by a **Community Chief** and a **Community Council**.</li>
+                                <li>Communities implement local programs, maintain civil registries, and manage neighborhood-level services.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="article" id="chap3">
+                    <h3 class="section-header">Chapter 3 — Composition of Local Legislative Bodies</h3>
+                    <ul>
+                        <li>Each Provincial, City, Municipal, and Community Council shall consist of **elected members** as determined by population and administrative guidelines.</li>
+                        <li>**Sectoral representatives** (youth, indigenous communities, marginalized sectors) shall comprise at least **20%** of each legislative body.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="title3">
+                <h2 class="title">TITLE III — POWERS AND FUNCTIONS</h2>
+
+                <div class="article" id="chap4">
+                    <h3 class="section-header">Chapter 4 — General Powers of LGUs</h3>
+                    <ol>
+                        <li>**Legislative Powers**
+                            <ul>
+                                <li>Enact ordinances and resolutions for the welfare of constituents.</li>
+                                <li>Approve budgets, development plans, and taxation measures.</li>
+                                <li>Regulate local business, commerce, and community services.</li>
+                            </ul>
+                        </li>
+                        <li>**Executive Powers**
+                            <ul>
+                                <li>Implement laws, ordinances, and programs.</li>
+                                <li>Deliver basic services including health, education, sanitation, infrastructure, and disaster management.</li>
+                                <li>Maintain public order and safety in cooperation with national agencies.</li>
+                            </ul>
+                        </li>
+                        <li>**Fiscal Powers**
+                            <ul>
+                                <li>Levy local taxes, fees, and charges in accordance with national law.</li>
+                                <li>Manage LGU revenues, assets, and resources.</li>
+                                <li>Approve local budgets and development funds.</li>
+                            </ul>
+                        </li>
+                        <li>**Judicial/Quasi-Judicial Powers**
+                            <ul>
+                                <li>Resolve administrative disputes within the LGU jurisdiction.</li>
+                                <li>Exercise disciplinary action over officials and employees under their authority.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="article" id="chap5">
+                    <h3 class="section-header">Chapter 5 — Special Powers for Provinces and Cities</h3>
+                    <ul>
+                        <li>Provinces and independent cities may establish **economic zones, industrial parks, and tourism programs**.</li>
+                        <li>They may enter into cooperative agreements with foreign or local entities with approval from the **Imperial Cabinet**.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="title4">
+                <h2 class="title">TITLE IV — LOCAL PLANNING AND DEVELOPMENT</h2>
+
+                <div class="article" id="chap6">
+                    <h3 class="section-header">Chapter 6 — Local Development Councils (LDCs)</h3>
+                    <ul>
+                        <li>All LGUs shall establish an **LDC** to formulate and implement a Comprehensive Local Development Plan (**CLDP**).</li>
+                        <li>LDCs must conduct **public consultations** before adoption of the CLDP.</li>
+                        <li>Annual performance reports of LDCs shall be submitted to the **Imperial Ministry of Provincial Administration**.</li>
+                    </ul>
+                </div>
+
+                <div class="article" id="chap7">
+                    <h3 class="section-header">Chapter 7 — Citizen Participation</h3>
+                    <p>LGUs shall facilitate:</p>
+                    <ol>
+                        <li>Public hearings on budgets and ordinances.</li>
+                        <li>Citizen assemblies for local development feedback.</li>
+                        <li>Participatory monitoring of local projects.</li>
+                    </ol>
+                </div>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="title5">
+                <h2 class="title">TITLE V — ACCOUNTABILITY AND OVERSIGHT</h2>
+
+                <div class="article" id="chap8">
+                    <h3 class="section-header">Chapter 8 — Internal Accountability</h3>
+                    <ul>
+                        <li>LGU officials shall submit **quarterly and annual reports** on programs, expenditures, and projects.</li>
+                        <li>Community officials shall maintain a **Public Ledger** accessible to all residents.</li>
+                    </ul>
+                </div>
+
+                <div class="article" id="chap9">
+                    <h3 class="section-header">Chapter 9 — Oversight Mechanisms</h3>
+                    <ul>
+                        <li>The Imperial Ministry of Provincial Administration may **audit LGU operations** and recommend corrective measures.</li>
+                        <li>Citizens may file complaints or grievances regarding LGU malfeasance through the **Local Imperial Knight Office**.</li>
+                    </ul>
+                </div>
+
+                <div class="article" id="chap10">
+                    <h3 class="section-header">Chapter 10 — Ethics and Conduct</h3>
+                    <p>LGU officials must adhere to a Code of Conduct:</p>
+                    <ul>
+                        <li>No misuse of funds.</li>
+                        <li>Transparency in procurement and project implementation.</li>
+                        <li>Zero tolerance for corruption, nepotism, and abuse of power.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="title6">
+                <h2 class="title">TITLE VI — TRANSITION AND IMPLEMENTATION</h2>
+                <ol>
+                    <li>All existing LGUs shall **reorganize** according to this Code within immediate enactment.</li>
+                    <li>Provincial and city ordinances inconsistent with this Code shall be **reviewed and harmonized**.</li>
+                    <li>The Imperial Ministry of Local Affairs shall issue **implementing rules and regulations (IRR)** within six months of enactment.</li>
+                </ol>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="title7">
+                <h2 class="title">TITLE VII — MISCELLANEOUS PROVISIONS</h2>
+                <ol>
+                    <li>LGUs may establish partnerships with NGOs, private organizations, and other LGUs to enhance services.</li>
+                    <li>LGUs shall respect **indigenous practices and customary laws** unless conflicting with this Code or Imperial law.</li>
+                    <li>Violations of this Code may result in **suspension, fines, or removal from office** by the Imperial Court.</li>
+                </ol>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="table">
+                <h2 class="title">BRISTEVIA LGU OPERATIONAL TABLE</h2>
+                
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>LGU Level</th>
+                                <th>Population Range</th>
+                                <th>Executive</th>
+                                <th>Legislative Body</th>
+                                <th>Council Members</th>
+                                <th>Sectoral Representatives</th>
+                                <th>Revenue Share Formula</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Province</td>
+                                <td>500,001+</td>
+                                <td>Governor</td>
+                                <td>Provincial Council</td>
+                                <td>12–20</td>
+                                <td>3–4 (20%)</td>
+                                <td>40% of national LGU fund + local taxes</td>
+                            </tr>
+                            <tr>
+                                <td>City 1st Class</td>
+                                <td>150,001+</td>
+                                <td>City Mayor</td>
+                                <td>City Council</td>
+                                <td>8–12</td>
+                                <td>2–3 (20%)</td>
+                                <td>30% of national LGU fund + local taxes</td>
+                            </tr>
+                            <tr>
+                                <td>City 2nd Class</td>
+                                <td>100,001–150,000</td>
+                                <td>City Mayor</td>
+                                <td>City Council</td>
+                                <td>6–10</td>
+                                <td>1–2 (20%)</td>
+                                <td>25% of national LGU fund + local taxes</td>
+                            </tr>
+                            <tr>
+                                <td>Municipality or Town</td>
+                                <td>20,001–100,000</td>
+                                <td>Municipal Mayor</td>
+                                <td>Municipal Council</td>
+                                <td>6–8</td>
+                                <td>1–2 (20%)</td>
+                                <td>20% of national LGU fund + local taxes</td>
+                            </tr>
+                            <tr>
+                                <td>Community</td>
+                                <td>1–20,000</td>
+                                <td>Community Chief</td>
+                                <td>Community Council</td>
+                                <td>5–7</td>
+                                <td>–</td>
+                                <td>(Included in municipal share)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="notes">
+                    <h3>Notes on Table:</h3>
+                    <ol>
+                        <li>**Council Members** — elected through direct elections every call for election year.</li>
+                        <li>**Sectoral Representatives** — youth, indigenous communities, and marginalized sectors; 20% of each council.</li>
+                        <li>**Revenue Share Formula** — the national LGU fund is divided among provinces, cities, municipalities, and communities based on population, fiscal capacity, and strategic importance. Local LGUs may supplement revenue through:
+                            <ul>
+                                <li>Local taxes (property, business, service fees)</li>
+                                <li>User fees for utilities and services</li>
+                                <li>Grants and cooperative agreements</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <h3 class="section-header">Additional Operational Guidelines</h3>
+                <ul>
+                    <li>**Budget Approval:** Provincial and city councils approve budgets annually. Municipal and community councils approve budgets semi-annually.</li>
+                    <li>**Development Planning:** Each LGU shall prepare a Comprehensive Local Development Plan (CLDP) every 3 years. CLDP must include infrastructure, health, education, disaster management, and revenue projections.</li>
+                    <li>**Citizen Oversight:** Citizens have the right to attend council sessions, access public ledgers, and participate in project monitoring committees.</li>
+                    <li>**Auditing:** The Imperial Ministry of Local Affairs audits LGUs annually. Misuse of funds triggers corrective action, including fines, suspension, or removal.</li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

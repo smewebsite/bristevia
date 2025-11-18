@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚜️ The Imperial Penal Code of Bristevia ⚜️</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Variables for Dark Theme (consistent with other legal pages) */
+        :root {
+            --navy: #1f2340;
+            --gold: #c8a84a;
+            --text: #f3efe8;
+            --panel: #0f1628; /* Darker panel background */
+            --divider: rgba(200, 168, 74, 0.2);
+            --article-num: #8b6e36; /* Muted gold for article numbers */
+        }
+
+        /* Override body styles for this page's dark theme */
+        body {
+            background: linear-gradient(180deg, var(--navy) 0%, #111426 100%);
+            color: var(--text);
+            padding: 0;
+        }
+
+        header h1 {
+            color: var(--gold);
+        }
+
+        /* Main Grid Layout for Sticky TOC */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr; /* Sidebar width and main content */
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Sticky Table of Contents (TOC) */
+        .toc-panel {
+            position: sticky;
+            top: 20px; /* Space from the top when scrolled */
+            height: fit-content;
+            background-color: var(--panel);
+            border: 1px solid var(--divider);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .toc-panel h2 {
+            color: var(--gold);
+            margin-top: 0;
+            border-bottom: 1px solid var(--divider);
+            padding-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .toc-panel ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-panel ul li {
+            margin: 8px 0;
+        }
+
+        .toc-panel ul li a {
+            color: var(--text);
+            font-size: 0.95em;
+            transition: color 0.2s;
+        }
+
+        .toc-panel ul li a:hover {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Main Rule Content Styling */
+        .rule-content {
+            padding-right: 20px;
+        }
+
+        .rule-content h2.title, .rule-content h2.chapter {
+            color: var(--gold);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+
+        .article {
+            margin-top: 20px;
+            padding: 15px;
+            border-left: 3px solid var(--gold);
+            background-color: rgba(15, 22, 40, 0.4); /* Slightly lighter background for articles */
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .article-title {
+            font-weight: bold;
+            color: var(--article-num);
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .article-title strong {
+            color: var(--gold);
+        }
+
+        .article p, .article ul {
+            margin-bottom: 10px;
+        }
+
+        .article ul {
+            list-style-type: none;
+            padding-left: 15px;
+        }
+
+        .article ul li {
+            margin-bottom: 5px;
+        }
+
+        .divider-short {
+            border: none;
+            height: 1px;
+            background-color: var(--divider);
+            margin: 20px 0;
+        }
+
+        /* Media Query for smaller screens (removes sticky sidebar) */
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .toc-panel {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚜️ THE IMPERIAL PENAL CODE OF BRISTEVIA ⚜️</h1>
+    </header>
+
+    <div class="content-grid">
+        <div class="toc-panel">
+            <h2>Code Outline</h2>
+            <ul>
+                <li><a href="#part1">PART 1</a></li>
+                <li><a href="#title1">TITLE ONE (Felonies)</a></li>
+                <li><a href="#chap1">Chapter 1 (Felonies)</a></li>
+                <li><a href="#chap2">Chapter 2 (Justifying/Exempting)</a></li>
+                <li><a href="#chap3">Chapter 3 (Mitigating)</a></li>
+                <li><a href="#chap4">Chapter 4 (Aggravating)</a></li>
+                <li><a href="#chap5">Chapter 5 (Alternative)</a></li>
+                <li><a href="#title2">TITLE TWO (Criminal Liability)</a></li>
+                <li><a href="#title3">TITLE THREE (Penalties)</a></li>
+                <li><a href="#part2">PART 2 (Supplementary)</a></li>
+            </ul>
+        </div>
+
+        <main class="rule-content">
+            <section id="part1">
+                <h2 class="title">PART 1</h2>
+                
+                <div class="article" id="art1">
+                    <div class="article-title">Article I. Time When the Act Takes Effect.</div>
+                    <p>This Code shall take effect immediately upon the **Imperial Signature** of His Majesty the Souverion and Her Majesty the Souveria, and its promulgation throughout the Imperial Realm of Bristevia.</p>
+                </div>
+                
+                <div class="article" id="art2">
+                    <div class="article-title">Article II. Application of Its Provisions.</div>
+                    <p>Except as may be provided under treaties, compacts, or laws of preferential application, the provisions of this Code shall have force and effect throughout the entire **Dominion of Bristevia** — encompassing all provinces, dependencies, territories, and Imperial dominions, including its atmosphere, interior waters, and maritime jurisdiction.</p>
+                    <p>This Code shall likewise apply beyond the Imperial boundaries to any person who:</p>
+                    <ol>
+                        <li>Commits an offense aboard an Imperial ship or airship registered under the flag of Bristevia;</li>
+                        <li>Forges or counterfeits any coin, currency, obligation, or security issued by the Imperial Treasury or any instrument of the Crown;</li>
+                        <li>Participates in the introduction or circulation of any such falsified obligations or securities within the Empire;</li>
+                        <li>Being an officer or servant of the Crown, commits an offense in the exercise of his official functions; or</li>
+                        <li>Commits crimes against the Imperial Crown, Imperial Security, or the Law of Nations, as defined in this Code.</li>
+                    </ol>
+                </div>
+            </section>
+            
+            <hr class="divider-short">
+
+            <section id="title1">
+                <h2 class="title">TITLE ONE: Of Felonies and the Circumstances Which Affect Criminal Liability</h2>
+
+                <div id="chap1">
+                    <h2 class="chapter">CHAPTER ONE — Of Felonies</h2>
+                    
+                    <div class="article" id="art3">
+                        <div class="article-title">Article III. Definition.</div>
+                        <p>Acts and omissions punishable by Imperial law are denominated felonies (delitos imperiales).</p>
+                        <p>Felonies are committed either:</p>
+                        <ul>
+                            <li>By means of **deceit (dolo)**, when the act is done with deliberate intent; or</li>
+                            <li>By **fault (culpa)**, when the wrongful act results from imprudence, negligence, lack of foresight, or want of skill.</li>
+                        </ul>
+                    </div>
+
+                    <div class="article" id="art4">
+                        <div class="article-title">Article IV. Criminal Liability.</div>
+                        <p>Criminal liability shall be incurred:</p>
+                        <ol>
+                            <li>By any person committing a felony, although the wrongful act done be **different from that which he intended**;</li>
+                            <li>By any person performing an act which would constitute an offense against person or property were it not for the inherent **impossibility of its accomplishment** or the ineffectual means employed.</li>
+                        </ol>
+                    </div>
+
+                    <div class="article" id="art5">
+                        <div class="article-title">Article V. Duty of the Courts.</div>
+                        <p>Whenever an Imperial Court perceives an act proper to repress yet **not punishable by any law**, it shall decide the matter accordingly and submit a report to the Minister of Justice, detailing the grounds for recommending penal legislation.</p>
+                        <p>Likewise, where strict application of this Code results in a clearly **excessive penalty**, the Court shall report the matter to the Minister of Justice for review, without suspending the execution of judgment.</p>
+                    </div>
+
+                    <div class="article" id="art6">
+                        <div class="article-title">Article VI. Degrees of Felony.</div>
+                        <p>Felonies are **consummated, frustrated, or attempted**, all of which are punishable.</p>
+                        <ul>
+                            <li>A felony is **consummated** when all elements necessary for its execution are present.</li>
+                            <li>It is **frustrated** when all acts of execution are performed but the felony is not produced by causes independent of the perpetrator’s will.</li>
+                            <li>It is **attempted** when the offender begins the commission by overt acts but fails to complete it due to causes other than voluntary desistance.</li>
+                        </ul>
+                    </div>
+
+                    <div class="article" id="art7">
+                        <div class="article-title">Article VII. When Light Felonies are Punishable.</div>
+                        <p>**Light felonies** are punishable only when **consummated**, except when committed against persons or property.</p>
+                    </div>
+
+                    <div class="article" id="art8">
+                        <div class="article-title">Article VIII. Conspiracy and Proposal.</div>
+                        <p>**Conspiracy and proposal** to commit felony are punishable only when **expressly provided by law**.</p>
+                        <ul>
+                            <li>**Conspiracy** exists when two or more persons agree and decide to commit a felony.</li>
+                            <li>**Proposal** exists when a person who has resolved to commit a felony proposes its execution to another.</li>
+                        </ul>
+                    </div>
+
+                    <div class="article" id="art9">
+                        <div class="article-title">Article IX. Classification of Felonies.</div>
+                        <ul>
+                            <li>**Grave felonies** are those punishable by capital or afflictive penalties.</li>
+                            <li>**Less grave felonies** are punished by correctional penalties.</li>
+                            <li>**Light felonies** are those punishable by minor arrest or fine as set by this Code.</li>
+                        </ul>
+                    </div>
+
+                    <div class="article" id="art10">
+                        <div class="article-title">Article X. Offenses Under Special Imperial Laws.</div>
+                        <p>Offenses punishable under special Imperial enactments are **not governed by this Code** unless expressly provided. This Code shall serve as **supplementary law** thereto.</p>
+                    </div>
+                </div>
+
+                <hr class="divider-short">
+
+                <div id="chap2">
+                    <h2 class="chapter">CHAPTER TWO — Justifying and Exempting Circumstances</h2>
+                    
+                    <div class="article" id="art11">
+                        <div class="article-title">Article XI. Justifying Circumstances.</div>
+                        <p>No criminal liability shall arise from:</p>
+                        <ol>
+                            <li>**Defense of one’s person or rights**, when there is:
+                                <ul>
+                                    <li>Unlawful aggression;</li>
+                                    <li>Reasonable necessity of means to repel it;</li>
+                                    <li>Lack of sufficient provocation on the part of the defender.</li>
+                                </ul>
+                            </li>
+                            <li>**Defense of spouse, ascendants, descendants, legitimate or adopted siblings, or relatives** within the fourth degree, under the same conditions.</li>
+                            <li>**Defense of a stranger**, under the first two requisites, provided the act is not driven by revenge or evil motive.</li>
+                            <li>The **avoidance of a greater evil**, provided:
+                                <ul>
+                                    <li>The evil sought to be avoided actually exists;</li>
+                                    <li>The injury feared is greater than that done to prevent it;</li>
+                                    <li>No other less harmful means are available.</li>
+                                </ul>
+                            </li>
+                            <li>**Fulfillment of a duty** or lawful exercise of right or office.</li>
+                            <li>**Obedience to a lawful order** issued by a superior.</li>
+                        </ol>
+                    </div>
+
+                    <div class="article" id="art12">
+                        <div class="article-title">Article XII. Exempting Circumstances.</div>
+                        <p>The following are exempt from criminal liability:</p>
+                        <ol>
+                            <li>**Imbeciles or insane persons**, unless the latter act during a lucid interval.</li>
+                            <li>Persons **under fifteen** years old.</li>
+                            <li>Persons **over fifteen but under eighteen**, unless they act with discernment.</li>
+                            <li>Persons causing injury by pure **accident** in the performance of a lawful act with due care.</li>
+                            <li>Persons acting under **irresistible force**.</li>
+                            <li>Persons acting under **uncontrollable fear** of an equal or greater injury.</li>
+                            <li>Persons prevented by **lawful cause** from performing an act required by law.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <hr class="divider-short">
+
+                <div id="chap3">
+                    <h2 class="chapter">CHAPTER THREE — Mitigating Circumstances</h2>
+                    
+                    <div class="article" id="art13">
+                        <div class="article-title">Article XIII. Mitigating Circumstances.</div>
+                        <p>The following circumstances lessen criminal liability:</p>
+                        <ol>
+                            <li>**Incomplete justifying or exempting** circumstances;</li>
+                            <li>Offender **under eighteen or over seventy** years of age;</li>
+                            <li>**No intention** to commit so grave a wrong;</li>
+                            <li>**Sufficient provocation** from the offended party;</li>
+                            <li>Immediate **vindication of a grave offense**;</li>
+                            <li>Impulse of **passion or obfuscation**;</li>
+                            <li>**Voluntary surrender** or confession before trial;</li>
+                            <li>**Physical defect** restricting defense or communication;</li>
+                            <li>**Illness** diminishing willpower without loss of reason;</li>
+                            <li>Any **analogous circumstance** of equal mitigating character.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <hr class="divider-short">
+
+                <div id="chap4">
+                    <h2 class="chapter">CHAPTER FOUR — Aggravating Circumstances</h2>
+                    
+                    <div class="article" id="art14">
+                        <div class="article-title">Article XIV. Aggravating Circumstances.</div>
+                        <p>The following circumstances increase criminal liability:</p>
+                        <ol>
+                            <li>**Abuse of public office** or position of trust;</li>
+                            <li>**Contempt or insult to Imperial authorities**;</li>
+                            <li>**Disregard of respect** due to rank, age, or sex; or offense committed in the **dwelling** of the offended party without provocation;</li>
+                            <li>**Abuse of confidence** or evident ungratefulness;</li>
+                            <li>Crime committed within the **Imperial Palace**, in presence of the Sovereigns, or in places of worship or public duty;</li>
+                            <li>Crime committed **by night**, in uninhabited places, or by a **band** of armed persons;</li>
+                            <li>Crime committed during **conflagration, storm, epidemic**, or similar calamity;</li>
+                            <li>Crime committed with aid of **armed men** or with **assurance of impunity**;</li>
+                            <li>**Habitual delinquency or recidivism**;</li>
+                            <li>**Previous punishment** for equal or greater offense;</li>
+                            <li>Crime committed for **price, reward, or promise**;</li>
+                            <li>Crime committed by **destructive means** such as fire, poison, explosion, or inundation;</li>
+                            <li>**Evident premeditation**;</li>
+                            <li>Use of **craft, fraud, or disguise**;</li>
+                            <li>**Abuse of superior strength** or employment of means to weaken defense;</li>
+                            <li>**Treachery** to ensure execution without risk to oneself;</li>
+                            <li>Adding **ignominy** to the natural effects of the act;</li>
+                            <li>**Unlawful entry** by improper means;</li>
+                            <li>Breaking wall, roof, floor, door, or window to commit offense;</li>
+                            <li>Use of minors, motorized vehicles, or airships as means of offense;</li>
+                            <li>**Deliberate augmentation of wrong** beyond necessity.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <hr class="divider-short">
+
+                <div id="chap5">
+                    <h2 class="chapter">CHAPTER FIVE — Alternative Circumstances</h2>
+                    
+                    <div class="article" id="art15">
+                        <div class="article-title">Article XV. Definition.</div>
+                        <p>Alternative circumstances may aggravate or mitigate depending on the conditions of the act. These include:</p>
+                        <ul>
+                            <li>**Relationship** between offender and offended party;</li>
+                            <li>**Intoxication**;</li>
+                            <li>Degree of **education or instruction**.</li>
+                        </ul>
+                        <p>**Intoxication** is mitigating when not habitual or premeditated; otherwise, it is aggravating.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="title2">
+                <h2 class="title">TITLE TWO: Persons Criminally Liable</h2>
+                
+                <div class="article" id="art16">
+                    <div class="article-title">Article XVI. Criminal Liability.</div>
+                    <p>For grave and less grave felonies, the following are criminally liable:</p>
+                    <ol>
+                        <li>Principals;</li>
+                        <li>Accomplices;</li>
+                        <li>Accessories.</li>
+                    </ol>
+                    <p>For light felonies, only **Principals and Accomplices** are liable.</p>
+                </div>
+
+                <div class="article" id="art17">
+                    <div class="article-title">Article XVII. Principals.</div>
+                    <p>Those are principals who:</p>
+                    <ol>
+                        <li>Take **direct part in the execution**;</li>
+                        <li>**Induce others** to commit;</li>
+                        <li>Cooperate by **indispensable acts**.</li>
+                    </ol>
+                </div>
+
+                <div class="article" id="art18">
+                    <div class="article-title">Article XVIII. Accomplices.</div>
+                    <p>Those who cooperate in the execution of the offense by **previous or simultaneous acts**, without being principals.</p>
+                </div>
+
+                <div class="article" id="art19">
+                    <div class="article-title">Article XIX. Accessories.</div>
+                    <p>Those who, after knowing of the crime, participate by:</p>
+                    <ol>
+                        <li>**Profiting** from its effects;</li>
+                        <li>**Concealing evidence** or effects of the crime;</li>
+                        <li>**Harboring or assisting** the principal, especially in crimes against the Crown, murder, or treason.</li>
+                    </ol>
+                </div>
+
+                <div class="article" id="art20">
+                    <div class="article-title">Article XX. Exempt Accessories.</div>
+                    <p>Accessories related to the principal within the degree of **spouse, ascendant, descendant, or sibling** shall not be punished, except those profiting from the crime.</p>
+                </div>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="title3">
+                <h2 class="title">TITLE THREE: Of Penalties</h2>
+                <div id="chap1_title3">
+                    <h2 class="chapter">CHAPTER ONE — General Principles</h2>
+                    
+                    <div class="article" id="art21">
+                        <div class="article-title">Article XXI. Legality of Penalties.</div>
+                        <p>No person shall be punished by any penalty **not prescribed by Imperial law** prior to the commission of the felony.</p>
+                    </div>
+
+                    <div class="article" id="art22">
+                        <div class="article-title">Article XXII. Retroactivity.</div>
+                        <p>Penal laws **favorable to the offender shall apply retroactively** unless the offender is a habitual criminal.</p>
+                    </div>
+
+                    <div class="article" id="art23">
+                        <div class="article-title">Article XXIII. Effect of Pardon.</div>
+                        <p>A pardon by the offended party **does not extinguish criminal liability**, except when the law expressly provides; but it extinguishes civil liability upon express waiver.</p>
+                    </div>
+
+                    <div class="article" id="art24">
+                        <div class="article-title">Article XXIV. Preventive or Safety Measures.</div>
+                        <p>The following are **not considered penalties** under Imperial law:</p>
+                        <ol>
+                            <li>Preventive detention of accused persons;</li>
+                            <li>Commitment of minors to reformative institutions;</li>
+                            <li>Suspension from office pending trial;</li>
+                            <li>Administrative fines;</li>
+                            <li>Civil reparations as may be established by Imperial civil law.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <hr class="divider-short">
+
+                <div id="chap2_title3">
+                    <h2 class="chapter">CHAPTER TWO — Classification of Penalties</h2>
+                    
+                    <div class="article" id="art25">
+                        <div class="article-title">Article XXV. Imperial Scale of Penalties</div>
+                        
+                        <h3>Principal Penalties</h3>
+                        <ul>
+                            <li>**Capital**: Death (Imperial Execution)</li>
+                            <li>**Afflictive**: Reclusion Perpetua, Reclusion Temporal, Absolute or Special Disqualification (Perpetual or Temporary), Prisión Mayor</li>
+                            <li>**Correctional**: Prisión Correccional, Arresto Mayor, Suspension, or Destierro (Banishment)</li>
+                            <li>**Light**: Arresto Menor, Public Censure</li>
+                            <li>**Common Penalties**: Fine or Bond to Keep the Peace</li>
+                        </ul>
+                        
+                        <h3>Accessory Penalties</h3>
+                        <ul>
+                            <li>Disqualification (Absolute or Special)</li>
+                            <li>Suspension of rights or offices</li>
+                            <li>Civil interdiction</li>
+                            <li>Indemnification</li>
+                            <li>Forfeiture or confiscation</li>
+                            <li>Payment of costs</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="divider-short">
+            
+            <section id="part2">
+                <h2 class="title">PART 2: Supplementary Provisions</h2> https://lawphil.net/statutes/acts/act1930/act_3815_1930b.html
+                <p>This part shall contain supplementary provisions adapted for Bristevia. The earlier **25 provisions (Part 1) shall prevail** over subsequent provisions (Part 2).</p>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>

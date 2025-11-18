@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📜 The History of Bristevia 📜</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Variables for Dark Theme (consistent with other imperial pages) */
+        :root {
+            --navy: #1f2340;
+            --gold: #c8a84a;
+            --text: #f3efe8;
+            --panel: #0f1628; /* Darker panel background */
+            --divider: rgba(200, 168, 74, 0.2);
+            --article-num: #8b6e36; /* Muted gold for section titles */
+        }
+
+        /* Override body styles for this page's dark theme */
+        body {
+            background: linear-gradient(180deg, var(--navy) 0%, #111426 100%);
+            color: var(--text);
+            padding: 0;
+        }
+
+        header h1 {
+            color: var(--gold);
+        }
+
+        /* Main Grid Layout for Sticky TOC */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr; /* Sidebar width and main content */
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Sticky Table of Contents (TOC) */
+        .toc-panel {
+            position: sticky;
+            top: 20px; /* Space from the top when scrolled */
+            height: fit-content;
+            background-color: var(--panel);
+            border: 1px solid var(--divider);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .toc-panel h2 {
+            color: var(--gold);
+            margin-top: 0;
+            border-bottom: 1px solid var(--divider);
+            padding-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .toc-panel ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-panel ul li {
+            margin: 8px 0;
+        }
+
+        .toc-panel ul li a {
+            color: var(--text);
+            font-size: 0.95em;
+            transition: color 0.2s;
+        }
+
+        .toc-panel ul li a:hover {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Main Content Styling */
+        .rule-content {
+            padding-right: 20px;
+        }
+
+        .era-title {
+            color: var(--gold);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+        
+        .era-section {
+            margin-top: 30px;
+            padding: 20px;
+            border-left: 3px solid var(--gold);
+            background-color: rgba(15, 22, 40, 0.4);
+            border-radius: 0 5px 5px 0;
+        }
+
+        .era-section h3 {
+            color: var(--article-num);
+            font-size: 1.4em;
+            margin-top: 0;
+            border-bottom: 1px dashed var(--divider);
+            padding-bottom: 5px;
+        }
+        
+        .era-section ul, .era-section ol {
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .era-section h4 {
+            color: var(--gold);
+            margin-top: 20px;
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+
+        .divider-short {
+            border: none;
+            height: 1px;
+            background-color: var(--divider);
+            margin: 30px 0;
+        }
+
+        /* Special Styling for Timeline/Summary Tables */
+        .data-table-container {
+            margin-top: 30px;
+            overflow-x: auto;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9em;
+            min-width: 900px; /* Increased minimum width for leader tables */
+        }
+
+        .data-table th, .data-table td {
+            border: 1px solid var(--divider);
+            padding: 10px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .data-table thead th {
+            background-color: var(--navy);
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        /* Media Query for smaller screens (removes sticky sidebar) */
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .toc-panel {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📜 THE HISTORY OF BRISTEVIA 2 📜</h1>
+    </header>
+
+    <div class="content-grid">
+        <div class="toc-panel">
+            <h2>Chronology</h2>
+            <ul>
+                <li><a href="#era1">I. Prehistoric and Early Settlements</a></li>
+                <li><a href="#era2">II. The Age of Principalities</a></li>
+                <li><a href="#era3">III. The Era of Regional Kingdoms</a></li>
+                <li><a href="#era4">IV. The Age of Unification</a></li>
+                <li><a href="#era5">V. Expansion and Maritime Trade</a></li>
+                <li><a href="#era6">VI. Constitutional Reforms</a></li>
+                <li><a href="#era7">VII. The Contemporary Era</a></li>
+                <li class="divider-short" style="margin: 10px 0;"></li>
+                <li><a href="#origin">The Origin of Bristevia</a></li>
+                <li><a href="#expansion">Expansion & Consolidation</a></li>
+                <li><a href="#rebellion">History of Rebellion</a></li>
+                <li class="divider-short" style="margin: 10px 0;"></li>
+                <li><a href="#leaders">Timeline of Leaders</a></li>
+                <li><a href="#battles">Famous Battles & Incursions</a></li>
+                <li><a href="#stephens">The Stephen Legacy</a></li>
+            </ul>
+        </div>
+
+        <main class="rule-content">
+            <section id="era1" class="era-section">
+                <h2 class="era-title">I. Prehistoric and Early Settlements (Before 500 BCE)</h2>
+                <p>The lands of Bristevia were originally inhabited by scattered tribes of **hunter-gatherers**, primarily along the fertile river valleys of the Central and South regions. Archaeological evidence suggests early settlements near the Stephara River and the Solara Bay, where abundant fish and arable land allowed small communities to flourish.</p>
+                <ul>
+                    <li>**Culture and Economy:** Tribes were semi-nomadic, practicing rudimentary agriculture, hunting, and fishing. Pottery and bronze tools have been found in northern valleys, indicating early metallurgical knowledge.</li>
+                    <li>**Social Organization:** Small **kinship-based clans** governed themselves through elders and councils. Early religion focused on nature worship—particularly rivers, mountains, and celestial phenomena.</li>
+                </ul>
+            </section>
+            
+            <hr class="divider-short">
+
+            <section id="era2" class="era-section">
+                <h2 class="era-title">II. The Age of Principalities (500 BCE – 800 CE)</h2>
+                <p>By 500 BCE, the first **principalities** emerged in Bristevia, largely independent but linked through trade and marriage alliances. These were small, fortified settlements, often centered around hilltops or river crossings.</p>
+                
+                <h4>Key Principalities</h4>
+                <ol>
+                    <li>**Stepharia (Central Region):** Noted for fertile lands and strategic location. Controlled river trade and early agricultural hubs. (Capital: Stephara, modern-day Stephara City)</li>
+                    <li>**Jaybrienne (Central Region):** Coastal and river access facilitated early commerce. Rivaled Stepharia politically but often allied through dynastic marriages.</li>
+                    <li>**Orlencia (West Region):** Mountainous, with volcanic activity. Early mineral exploitation: iron, tin, and obsidian trade.</li>
+                    <li>**Northaven (North Region):** Harsh, snow-covered terrain. Communities focused on hunting, fur trading, and defense against northern raiders.</li>
+                    <li>**Solara (South Region):** Warm climate, fertile coastal plains. Early maritime activity, trading with southern archipelagos.</li>
+                </ol>
+
+                <h4>Political Dynamics</h4>
+                <ul>
+                    <li>Principalities were frequently at war over fertile land, trade routes, and water rights.</li>
+                    <li>Councils of **nobles and warrior-chiefs** often mediated disputes, and early treaties were inscribed on stone stelae.</li>
+                    <li>Alliances were reinforced by **arranged marriages**, forming proto-dynastic families.</li>
+                </ul>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="era3" class="era-section">
+                <h2 class="era-title">III. The Era of Regional Kingdoms (800 – 1300 CE)</h2>
+                <p>Principalities consolidated into larger **regional kingdoms**, marked by rising social stratification, **codification of laws**, and territorial expansion. The Central Dominion (Stepharia and Jaybrienne) often served as mediators.</p>
+                
+                <h4>Major Kingdoms</h4>
+                <ul>
+                    <li>**Northern Kingdom of Jaeyara:** Controlled the alpine north. Military strength relied on mountain fortresses and skilled archers.</li>
+                    <li>**Western Kingdom of Shadowfen:** Known for shipbuilding, wetland agriculture, and strategic ports.</li>
+                    <li>**Eastern Federation:** Focused on commerce and artisan guilds along the eastern rivers and coastlines.</li>
+                    <li>**Southern Confederacy:** Wealth derived from agriculture, fishing, and early maritime trade (Solara, Starella, Gabrielis).</li>
+                </ul>
+
+                <h4>Key Developments</h4>
+                <ul>
+                    <li>**Currency:** The first standardized coinage appears, based on silver mined in Orlencia and Draxenor.</li>
+                    <li>**Writing and Law:** Early **runic inscriptions** and codified laws appear in royal archives.</li>
+                    <li>**Religion:** Polytheistic faiths persist, now combined with ancestor worship; temples and ceremonial centers emerge.</li>
+                </ul>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="era4" class="era-section">
+                <h2 class="era-title">IV. The Age of Unification (1300 – 1550 CE)</h2>
+                <p>External and internal pressures led to the consolidation of the regional kingdoms under a single authority.</p>
+                
+                <h4>The Rise of the First Souverion</h4>
+                <ul>
+                    <li>A powerful dynasty from **Stepharia** gradually consolidated Central, North, and South regions through marriage, military campaigns, and diplomacy, creating the **Imperial Realm of Bristevia**.</li>
+                    <li>A **centralized bureaucracy** formed, standardizing taxation, military levies, and law.</li>
+                </ul>
+                
+                <h4>Military and Cultural Flourishing</h4>
+                <ul>
+                    <li>**Military Reforms:** Professional standing armies replaced feudal levies; coastal fleets were built to suppress piracy and protect trade.</li>
+                    <li>**Cultural Flourishing:** Construction of major temples, royal palaces, and the first version of **Stephara Imperial Library**. Patronage of scholars and architects led to a distinct Bristevian cultural identity.</li>
+                </ul>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="era5" class="era-section">
+                <h2 class="era-title">V. The Era of Expansion and Maritime Trade (1550 – 1750 CE)</h2>
+                <p>Bristevia, now unified, focused its resources on trade and exploration.</p>
+                <ul>
+                    <li>**Trade Networks:** Bristevian fleets established ports in distant islands and forged trade with neighboring realms.</li>
+                    <li>**Colonial Ventures:** Small colonies were founded on Blueford Island and along southern bays.</li>
+                    <li>**Internal Development:** Roads connecting all provinces are formalized; early provincial assemblies are established, planting seeds of modern constitutional governance.</li>
+                    <li>**Cultural and Scientific Growth:** Maps of the realm are created; **Maritime navigation schools** in Coastria and Aquaris produce expert sailors and explorers.</li>
+                </ul>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="era6" class="era-section">
+                <h2 class="era-title">VI. Constitutional Reforms and the Modern Empire (1750 – 1900 CE)</h2>
+                <ul>
+                    <li>**Codification of Law:** Early laws are compiled into Imperial Statutes, unifying the realm under a common legal framework.</li>
+                    <li>**Institutionalization of the Crown:** The **Souverion’s role is formalized**, balancing ceremonial, executive, and legislative functions.</li>
+                    <li>**Provincial Administration:** Five regions are officially demarcated (Central, West, North, South, East). Roads and communication networks are expanded.</li>
+                    <li>**Education and Culture:** The first **Imperial Academy** is founded in Stephara City, teaching governance, law, and military strategy.</li>
+                </ul>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="era7" class="era-section">
+                <h2 class="era-title">VII. The Contemporary Era (1900 CE – Present)</h2>
+                <ul>
+                    <li>**Industrialization:** Central and West regions develop mining and manufacturing.</li>
+                    <li>**Maritime Expansion:** Eastern and Southern ports expand international trade.</li>
+                    <li>**Constitutional Monarchy:** The modern Constitution codifies separation of powers, the role of the Imperial Assembly, judiciary, and rights of subjects.</li>
+                    <li>**Population Growth and Urbanization:** Major cities—Stephara, Solara, Shadowfen, Northaven—grow as economic and administrative hubs.</li>
+                    <li>**Defense and Diplomacy:** Bristevia maintains a professional military and navy, upholding sovereignty while fostering peaceful trade relations.</li>
+                </ul>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="origin" class="era-section">
+                <h2 class="era-title">VIII. Summary & Origin</h2>
+                <p>Bristevia’s history reflects gradual consolidation from tribal settlements to a unified imperial realm. Geography shaped its political, economic, and cultural development. Through dynastic leadership, strategic alliances, trade, and law, Bristevia emerged as a stable, prosperous empire.</p>
+
+                <h4>Founding Settlement of Bristevia</h4>
+                <ul>
+                    <li>**Province of Origin:** **Stephara**</li>
+                    <li>**Region:** Central</li>
+                    <li>**Initial Settlement Name:** **Vallora** (later evolved into Valloré City)</li>
+                    <li>**Approximate Founding:** 812 CE (Early Medieval Era)</li>
+                    <li>**First Principality:** **Stepharia**, founded by Chief/Prince Arthian Veylor.</li>
+                    <li>**Key Role:** The political, economic, and cultural heart, centered along the **Stephara River** and fertile plains, which eventually unified the other principalities.</li>
+                </ul>
+            </section>
+            
+            <hr class="divider-short">
+            
+            <section id="expansion" class="era-section">
+                <h2 class="era-title">Bristevian Expansion and Consolidation</h2>
+                <p>Bristevia's expansion was primarily an **internal unification** process, blending annexation, tribute systems, and strategic settlement rather than large-scale foreign colonization.</p>
+                
+                <h4>Timeline of Provincial Incorporation</h4>
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Era/Region</th>
+                                <th>Provinces Incorporated</th>
+                                <th>Primary Method</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>**I. Early Core (9th–11th Century)**</td>
+                                <td>Stephara, Jaybrienne</td>
+                                <td>Core Annexation, Dynastic Marriage</td>
+                            </tr>
+                            <tr>
+                                <td>**II. Western Expansion (11th–13th Century)**</td>
+                                <td>Orlencia, Draxenor, Westrion, Coastria, Velandor</td>
+                                <td>Strategic Conquest (Minerals), Tributary Alliance, Maritime Settlement</td>
+                            </tr>
+                            <tr>
+                                <td>**III. Northern Expansion (13th–15th Century)**</td>
+                                <td>Northaven, Montelune, Basilion, Aethelburg, Jaeyara, Sylvaren, Andriel</td>
+                                <td>Gradual Submission, Alliance/Treaty, Frontier Settlement</td>
+                            </tr>
+                            <tr>
+                                <td>**IV. Eastern Expansion (15th–17th Century)**</td>
+                                <td>Luminaris, Aquaris, Orinthal, Gravenor</td>
+                                <td>Peaceful Annexation (Economic), Maritime Colonization (Ports)</td>
+                            </tr>
+                            <tr>
+                                <td>**V. Southern Expansion (16th–18th Century)**</td>
+                                <td>Solara, Starella, Gabrielis, Southmere, Southemere, Britonvale</td>
+                                <td>Agricultural Colonization, Naval Annexation (Islands), Dynastic Agreements</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h4>Key Features of Expansion</h4>
+                <ul>
+                    <li>**Strategic Geography:** Focused on rivers, fertile plains, and coastal ports.</li>
+                    <li>**Cultural Integration:** Local laws and customs were codified into Imperial Law, ensuring allegiance without forced assimilation.</li>
+                    <li>**Economic Drivers:** Trade, agriculture, mining, and naval power motivated control over different regions.</li>
+                </ul>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="rebellion" class="era-section">
+                <h2 class="era-title">History of Internal Rebellion in Bristevia</h2>
+                <p>Uprisings often correlated with the degree of centralization and economic change, with remote areas (mountains, islands) being recurring flashpoints.</p>
+                
+                <ol>
+                    <li>**Early Provincial Uprisings (10th–12th C.):** Resistance to tribute and military levies by small principalities. (e.g., The **Frostwall Revolt** in Northaven).</li>
+                    <li>**Feudal Discontent and Noble Rebellions (13th–15th C.):** Uprisings by lesser nobles resisting centralized taxation and loss of local autonomy. (e.g., **Montelune Insurrection**).</li>
+                    <li>**Peasant and Coastal Rebellions (15th–17th C.):** Rooted in economic oppression, high taxation, and monopolistic trade practices. (e.g., **Velandor Uprising**).</li>
+                    <li>**Religious and Ideological Rebellions (17th–18th C.):** Resistance to Imperial Church reforms and censorship. (e.g., **Starella Faithful Rebellion**).</li>
+                    <li>**Early Modern Insurrections (18th–19th C.):** Sparked by industrialization, poor working conditions, and trade disputes. (e.g., **Northaven Labor Riot**).</li>
+                    <li>**Modern Era Stability (20th C. – Present):** Minor issues handled through codified law, negotiation, and institutions like the Imperial Assembly, reducing major uprisings.</li>
+                </ol>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="leaders" class="era-section">
+                <h2 class="era-title">IX. Timeline of Leaders of Bristevia</h2>
+
+                <h3>I. Early Princes and Kings of Principalities (812–1299 CE)</h3>
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Leader</th>
+                                <th>Title</th>
+                                <th>Region/Principality</th>
+                                <th>Reign</th>
+                                <th>Key Achievements</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Arthian Veylor</td>
+                                <td>Prince</td>
+                                <td>Stepharia (Central Region)</td>
+                                <td>812–850 CE</td>
+                                <td>Unified Vallora and nearby villages; established Fort Vallora; first High Council of Stepharia.</td>
+                            </tr>
+                            <tr>
+                                <td>Merian Veylor</td>
+                                <td>Prince</td>
+                                <td>Stepharia</td>
+                                <td>850–890 CE</td>
+                                <td>Annexed Jaybrienne via dynastic marriage; codified early laws and tribute system.</td>
+                            </tr>
+                            <tr>
+                                <td>Aldric Veylor</td>
+                                <td>Prince</td>
+                                <td>Stepharia</td>
+                                <td>890–920 CE</td>
+                                <td>Expanded north into Montelune; strengthened trade along the Stephara River.</td>
+                            </tr>
+                            <tr>
+                                <td>Corvin Rethmar</td>
+                                <td>Prince</td>
+                                <td>Orlencia</td>
+                                <td>910–950 CE</td>
+                                <td>Consolidated mountain clans; developed iron and tin trade.</td>
+                            </tr>
+                            <tr>
+                                <td>Lothar Valen</td>
+                                <td>King</td>
+                                <td>Northaven</td>
+                                <td>920–960 CE</td>
+                                <td>Secured northern passes; built Frostwall Fort; defended against raiders.</td>
+                            </tr>
+                            <tr>
+                                <td>Eryndor Vale</td>
+                                <td>Prince</td>
+                                <td>Solara</td>
+                                <td>940–980 CE</td>
+                                <td>Established early maritime trade; expanded agricultural settlements.</td>
+                            </tr>
+                            <tr>
+                                <td>Roderic Veylor</td>
+                                <td>Prince</td>
+                                <td>Stepharia</td>
+                                <td>980–1020 CE</td>
+                                <td>Formed Bristevian Confederation of semi-independent principalities; established central tribute system.</td>
+                            </tr>
+                            <tr>
+                                <td>Tharion Veylor</td>
+                                <td>Prince</td>
+                                <td>Stepharia</td>
+                                <td>1020–1050 CE</td>
+                                <td>Northern mountain campaigns; formal recognition by Basilion and Montelune.</td>
+                            </tr>
+                            <tr>
+                                <td>Alaric Veylor</td>
+                                <td>Prince</td>
+                                <td>Stepharia</td>
+                                <td>1050–1080 CE</td>
+                                <td>Annexed eastern provinces; built port towns in Luminaris and Aquaris.</td>
+                            </tr>
+                            <tr>
+                                <td>Emeric Veylor</td>
+                                <td>King</td>
+                                <td>Central Dominion</td>
+                                <td>1080–1110 CE</td>
+                                <td>Proto-parliament (“High Council”) established; roads connecting central and western regions.</td>
+                            </tr>
+                            <tr>
+                                <td>Bryndor Veylor</td>
+                                <td>King</td>
+                                <td>Central Dominion</td>
+                                <td>1110–1140 CE</td>
+                                <td>Consolidated Northaven and Montelune; fortified northern frontiers.</td>
+                            </tr>
+                            <tr>
+                                <td>Halric Veylor</td>
+                                <td>King</td>
+                                <td>Central Dominion</td>
+                                <td>1140–1180 CE</td>
+                                <td>Expanded to eastern coast and islands; naval ports established.</td>
+                            </tr>
+                            <tr>
+                                <td>Cedric Veylor</td>
+                                <td>King</td>
+                                <td>Central Dominion</td>
+                                <td>1180–1220 CE</td>
+                                <td>Strengthened central bureaucracy; early codification of laws across regions.</td>
+                            </tr>
+                            <tr>
+                                <td>Theodric Veylor</td>
+                                <td>King</td>
+                                <td>Central Dominion</td>
+                                <td>1220–1250 CE</td>
+                                <td>Southern provinces integrated via treaties and marriages; cultural integration promoted.</td>
+                            </tr>
+                            <tr>
+                                <td>Almeric Veylor</td>
+                                <td>King</td>
+                                <td>Central Dominion</td>
+                                <td>1250–1290 CE</td>
+                                <td>Roads and river networks completed; provinces divided into five regions for administration.</td>
+                            </tr>
+                            <tr>
+                                <td>Roderic II</td>
+                                <td>King</td>
+                                <td>Central Dominion</td>
+                                <td>1290–1299 CE</td>
+                                <td>Final consolidation of principalities before first Souverion; High Council fully operational.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>II. Souverions of the Imperial Realm (1300 CE – Present)</h3>
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Souverion</th>
+                                <th>Reign</th>
+                                <th>Key Achievements</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>**Roderic I** (First Souverion)</td>
+                                <td>1300–1335 CE</td>
+                                <td>Formally unified Central, North, and South regions; established Souverion title; professional army and coastal fleets.</td>
+                            </tr>
+                            <tr>
+                                <td>Emeric I</td>
+                                <td>1335–1368 CE</td>
+                                <td>Codified Imperial laws; expanded eastern ports; founded Stephara Imperial Library.</td>
+                            </tr>
+                            <tr>
+                                <td>Bryndor I</td>
+                                <td>1368–1405 CE</td>
+                                <td>Consolidated northern passes; fortifications built; maritime trade expanded.</td>
+                            </tr>
+                            <tr>
+                                <td>Halric I</td>
+                                <td>1405–1440 CE</td>
+                                <td>Encouraged cultural flourishing; imperial temples and palaces constructed; early diplomatic missions abroad.</td>
+                            </tr>
+                            <tr>
+                                <td>Cedric I</td>
+                                <td>1440–1485 CE</td>
+                                <td>Coastal provinces integrated; islands like Velandor incorporated; garrisons established.</td>
+                            </tr>
+                            <tr>
+                                <td>Almeric I</td>
+                                <td>1485–1520 CE</td>
+                                <td>Standardized taxation; proto-Imperial Academy founded; infrastructure development across five regions.</td>
+                            </tr>
+                            <tr>
+                                <td>Theodric I</td>
+                                <td>1520–1550 CE</td>
+                                <td>Maritime expansion; trade networks with neighboring realms; early colonial settlements established.</td>
+                            </tr>
+                            <tr>
+                                <td>Roderic III</td>
+                                <td>1550–1585 CE</td>
+                                <td>Consolidated southern provinces; agricultural colonization; coastal trade ports developed.</td>
+                            </tr>
+                            <tr>
+                                <td>Emeric II</td>
+                                <td>1585–1620 CE</td>
+                                <td>Religious reforms; Imperial Church established; integrated local spiritual practices.</td>
+                            </tr>
+                            <tr>
+                                <td>Bryndor II</td>
+                                <td>1620–1650 CE</td>
+                                <td>Strengthened naval fleet; suppressed Velandor Uprising; intellectual reforms.</td>
+                            </tr>
+                            <tr>
+                                <td>Halric II</td>
+                                <td>1650–1680 CE</td>
+                                <td>Extended eastern maritime influence; promoted arts and sciences; universities expanded.</td>
+                            </tr>
+                            <tr>
+                                <td>Cedric II</td>
+                                <td>1680–1715 CE</td>
+                                <td>Industrial and mining expansion; roads linking regions modernized.</td>
+                            </tr>
+                            <tr>
+                                <td>Almeric II</td>
+                                <td>1715–1745 CE</td>
+                                <td>Codification of Imperial law; provincial administration strengthened; early constitutional reforms.</td>
+                            </tr>
+                            <tr>
+                                <td>Theodric II</td>
+                                <td>1745–1775 CE</td>
+                                <td>Guild representation established; labor reforms; trade monopolies standardized.</td>
+                            </tr>
+                            <tr>
+                                <td>Roderic IV</td>
+                                <td>1775–1805 CE</td>
+                                <td>Fortified frontier provinces; northern rebellions subdued; cultural integration completed.</td>
+                            </tr>
+                            <tr>
+                                <td>Emeric III</td>
+                                <td>1805–1840 CE</td>
+                                <td>Industrialization; urban growth; modernization of military and navy.</td>
+                            </tr>
+                            <tr>
+                                <td>Bryndor III</td>
+                                <td>1840–1870 CE</td>
+                                <td>Provincial autonomy formalized; roads, bridges, and coastal ports expanded.</td>
+                            </tr>
+                            <tr>
+                                <td>Halric III</td>
+                                <td>1870–1900 CE</td>
+                                <td>Constitutional Monarchy formalized; Imperial Assembly created; public education expanded.</td>
+                            </tr>
+                            <tr>
+                                <td>Cedric III</td>
+                                <td>1900–1935 CE</td>
+                                <td>Modernization; professional army and navy; codification of civil, criminal, and commercial law.</td>
+                            </tr>
+                            <tr>
+                                <td>Almeric III</td>
+                                <td>1935–1960 CE</td>
+                                <td>Infrastructure, healthcare, and education reforms; overseas trade flourished.</td>
+                            </tr>
+                            <tr>
+                                <td>Theodric III</td>
+                                <td>1960–1985 CE</td>
+                                <td>Expansion of scientific research; regional governance further decentralized; peace treaties with neighboring realms.</td>
+                            </tr>
+                            <tr>
+                                <td>Roderic V</td>
+                                <td>1985–2000 CE</td>
+                                <td>Industrial and technological modernization; national identity and culture promoted.</td>
+                            </tr>
+                            <tr>
+                                <td>Ram</td>
+                                <td>2000–2020 CE</td>
+                                <td>Modern Bristevian Constitution enacted; Imperial Assembly and Judiciary strengthened.</td>
+                            </tr>
+                            <tr>
+                                <td>**Stephen XXVI** (Current Souverion)</td>
+                                <td>2020–Present</td>
+                                <td>Son of Ram and Rose; continues modernization; diplomacy and technological development; symbolic continuity of House of Valloré.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="battles" class="era-section">
+                <h2 class="era-title">X. Famous Battles, Sieges, and Foreign Incursions</h2>
+                <p>A record of key military and political conflicts that shaped the Imperial Realm.</p>
+
+                <ol>
+                    <li>
+                        <h4>Battle of Vallora (832 CE) – Internal</h4>
+                        <ul>
+                            <li>**Location:** Vallora, Stephara Province, Central Region</li>
+                            <li>**Context:** Early consolidation under Prince Arthian Veylor; local villages resisted unification.</li>
+                            <li>**Outcome:** Victory for Stepharia; Fort Vallora established; set the precedent for centralized authority.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Frostwall Revolt & Siege (1054–1057 CE) – Internal</h4>
+                        <ul>
+                            <li>**Location:** Frostwall, Northaven Province, North Region</li>
+                            <li>**Context:** Mountain clans resisted northern annexation and taxation.</li>
+                            <li>**Outcome:** Clans subdued after three winters; Imperial garrisons fortified northern passes.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>First Coastal Raid by the Marval Kingdom (1123 CE) – External</h4>
+                        <ul>
+                            <li>**Location:** Coastria and Westrion, West Region</li>
+                            <li>**Context:** Marval Kingdom (southern rival) attempted to seize western ports.</li>
+                            <li>**Outcome:** Bristevian naval forces repelled the invaders; coastal fortifications reinforced.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Jaybrienne Revolt Suppression (1390 CE) – Internal</h4>
+                        <ul>
+                            <li>**Location:** Jaybrienne, Central Region</li>
+                            <li>**Context:** Local baron attempted to declare independence after the unification.</li>
+                            <li>**Outcome:** Imperial Knights deployed; revolt crushed; local governance retained under strict oversight.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Velandor Uprising (1472 CE) – Internal</h4>
+                        <ul>
+                            <li>**Location:** Velandor Island Province, West Region</li>
+                            <li>**Context:** Islanders opposed monopolistic grain exports to the mainland.</li>
+                            <li>**Outcome:** Naval blockade and garrison installation; limited trade privileges granted to quell discontent.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>The Savanthian Siege of Northaven (1578 CE) – External</h4>
+                        <ul>
+                            <li>**Location:** Northaven, North Region</li>
+                            <li>**Context:** Savanthian Kingdom (northern rival) attempted to seize mineral-rich mountains.</li>
+                            <li>**Outcome:** Imperial army reinforced local garrisons; invaders repelled after a three-month siege.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Starella Faithful Rebellion (1623–1627 CE) – Internal</h4>
+                        <ul>
+                            <li>**Location:** Starella, South Region</li>
+                            <li>**Context:** Resistance to Imperial Church reforms and codified religious practices.</li>
+                            <li>**Outcome:** Suppression followed by partial incorporation of local religious customs to ensure stability.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Coastal Incursion by the Lothvar Pirates (1712 CE) – External</h4>
+                        <ul>
+                            <li>**Location:** Aquaris and eastern islands</li>
+                            <li>**Context:** Lothvar pirates attempted to seize control of maritime trade routes.</li>
+                            <li>**Outcome:** Bristevian fleet defeated raiders; naval academy established in Coastria; forts strengthened.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Goldhaven Guild Rebellion (1775 CE) – Internal</h4>
+                        <ul>
+                            <li>**Location:** Goldhaven, Central/West trade city</li>
+                            <li>**Context:** Artisans protested heavy taxation on exports during early industrialization.</li>
+                            <li>**Outcome:** Guild representation in provincial councils granted, setting a precedent for labor inclusion.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h4>Gabrielis Island Uprising (1892 CE) – Internal</h4>
+                        <ul>
+                            <li>**Location:** Gabrielis Island, South Region</li>
+                            <li>**Context:** Local governor attempted self-rule during a period of centralization.</li>
+                            <li>**Outcome:** Crushed after a month-long campaign; islands fortified but granted limited representation in the Imperial Assembly.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+
+            <hr class="divider-short">
+
+            <section id="stephens" class="era-section">
+                <h2 class="era-title">XI. The Stephen Legacy: A History of Imperial Advisors</h2>
+                <p>The lineage of Stephens represents a continuous, influential line of advisors, scholars, and planners who shaped the Empire through administration and diplomacy, culminating in the current Souverion. They were historically never rulers until the 21st century.</p>
+                
+                <div class="data-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Stephen No.</th>
+                                <th>Approx. Era</th>
+                                <th>Role / Position</th>
+                                <th>Key Achievements / Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Stephen I</td>
+                                <td>12th Century</td>
+                                <td>Foreign trader & scholar</td>
+                                <td>Settled in Stephara; introduced trade law and administrative skills to local princes.</td>
+                            </tr>
+                            <tr>
+                                <td>Stephen II</td>
+                                <td>13th Century</td>
+                                <td>High Council Advisor</td>
+                                <td>Codified tribute systems; mediated northern clan disputes.</td>
+                            </tr>
+                            <tr>
+                                <td>Stephen III</td>
+                                <td>13th–14th Century</td>
+                                <td>Provincial Scribe & Merchant</td>
+                                <td>Oversaw river trade; recorded early Stephara chronicles.</td>
+                            </tr>
+                            <tr>
+                                <td>Stephen IV</td>
+                                <td>14th Century</td>
+                                <td>Diplomatic Envoy</td>
+                                <td>Negotiated peace between Montelune and Central Dominion.</td>
+                            </tr>
+                            <tr>
+                                <td>Stephen V</td>
+                                <td>14th Century</td>
+                                <td>High Council Clerk</td>
+                                <td>Advised on early taxation and tribute system; reputation for fairness.</td>
+                            </tr>
+                            <tr>
+                                <td>Stephen VI</td>
+                                <td>15th Century</td>
+                                <td>Merchant Guild Leader</td>
+                                <td>Founded trade guilds in Velandor; financed first naval fleets.</td>
+                            </tr>
+                            <tr>
+                                <td>Stephen VII</td>
+                                <td>15th Century</td>
+                                <td>Provincial Administrator</td>
+                                <td>Oversaw Jaybrienne and Orlencia; integrated local laws with Imperial norms.</td>
+                            </tr>
+                            <tr>
+                                <td>Stephen VIII</td>
+                                <td>16th Century</td>
+                                <td>Military Planner</td>
+                                <td>Designed forts in Northaven and Montelune; defended passes and trade routes.</td>
+                            </tr>
+                            <tr>
+                                <td>Stephen IX</td>
+                                <td>16th Century</td>
+                                <td>Naval Commander</td>
+                                <td>Coordinated maritime patrols along Aquaris and Coastria coasts.</td>
+                            </tr>
+                            <tr>
+                                <td>Stephen X</td>
+                                <td>17th Century</td>
+                                <td>Cultural Patron</td>
+                                <td>Sponsored Imperial temples, libraries, and art projects in Stephara.</td>
+                            </tr>
+                            <tr>
+                                <td>Stephen XI</td>
+                                <td>17th Century</td>
+                                <td>Economic Advisor</td>
+                                <td>Promoted coastal trade; developed port towns in Solara and Gabrielis.</td>
+                            </tr>
+                            <tr>
+                                <td>Stephen XII</td>
+                                <td>17th–18th Century</td>
+                                <td>Provincial Governor</td>
+                                <td>Administered eastern provinces; implemented tribute reforms.</td>
+                            </tr>
+                            <tr>
+                                <td>Stephen XIII</td>
+                                <td>18th Century

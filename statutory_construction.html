@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚖️ Statutory Construction Guide of the Empire of Bristevia</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Variables for Dark Theme (consistent with other legal pages) */
+        :root {
+            --navy: #1f2340;
+            --gold: #c8a84a;
+            --text: #f3efe8;
+            --panel: #0f1628; /* Darker panel background */
+            --divider: rgba(200, 168, 74, 0.2);
+        }
+
+        /* Override body styles for this page's dark theme */
+        body {
+            background: linear-gradient(180deg, var(--navy) 0%, #111426 100%);
+            color: var(--text);
+            padding: 0;
+        }
+
+        /* Main Grid Layout for Sticky TOC */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr; /* Sidebar width and main content */
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Sticky Table of Contents (TOC) */
+        .toc-panel {
+            position: sticky;
+            top: 20px; /* Space from the top when scrolled */
+            height: fit-content;
+            background-color: var(--panel);
+            border: 1px solid var(--divider);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .toc-panel h2 {
+            color: var(--gold);
+            margin-top: 0;
+            border-bottom: 1px solid var(--divider);
+            padding-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .toc-panel ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-panel ul li {
+            margin: 8px 0;
+        }
+
+        .toc-panel ul li a {
+            color: var(--text);
+            font-size: 0.95em;
+            transition: color 0.2s;
+        }
+
+        .toc-panel ul li a:hover {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        /* Main Rule Content Styling */
+        .rule-content {
+            padding-right: 20px;
+        }
+
+        .rule-content h2 {
+            color: var(--gold);
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+
+        .rule-content h3 {
+            color: var(--text);
+            font-size: 1.2em;
+            margin-top: 25px;
+            font-weight: bold;
+        }
+        
+        /* List styling for the content */
+        .rule-content ol {
+            list-style-type: decimal;
+            padding-left: 20px;
+        }
+
+        .rule-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .rule-content li {
+            margin-bottom: 10px;
+        }
+        
+        .example {
+            font-style: italic;
+            margin-top: 5px;
+            margin-left: 10px;
+            color: var(--muted);
+        }
+
+        .divider {
+            border: none;
+            height: 1px;
+            background-color: var(--divider);
+            margin: 30px 0;
+        }
+
+        /* Media Query for smaller screens (removes sticky sidebar) */
+        @media (max-width: 900px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .toc-panel {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚖️ STATUTORY CONSTRUCTION GUIDE OF THE EMPIRE OF BRISTEVIA ⚖️</h1>
+        <h2>(Law School Version – Doctrinal + Practical)</h2>
+    </header>
+
+    <div class="content-grid">
+        <div class="toc-panel">
+            <h2>Guide Sections</h2>
+            <ul>
+                <li><a href="#purpose">I. Purpose</a></li>
+                <li><a href="#primary">II. PRIMARY RULES</a></li>
+                <li><a href="#secondary">III. SECONDARY RULES</a></li>
+                <li><a href="#harmonization">IV. HARMONIZATION DOCTRINES</a></li>
+                <li><a href="#presumptions">V. PRESUMPTIONS</a></li>
+                <li><a href="#bristevia">VI. SPECIAL DOCTRINES (BRISTEVIA)</a></li>
+                <li><a href="#temporal">VII. TEMPORAL RULES</a></li>
+                <li><a href="#admin">VIII. ADMINISTRATIVE INTERPRETATION</a></li>
+                <li><a href="#judicial">IX. JUDICIAL TECHNIQUES</a></li>
+                <li><a href="#equity">X. FINAL RULE: EQUITY</a></li>
+                <li><a href="#constitutional">XI. CONSTITUTIONAL CANONS</a></li>
+                <li><a href="#numerical">XII. NUMERICAL & TEXTUAL CANONS</a></li>
+                <li><a href="#application">XIII. DOCTRINES IN STATUTORY APPLICATION</a></li>
+            </ul>
+        </div>
+
+        <main class="rule-content">
+            <section id="purpose">
+                <h2>I. Purpose of Statutory Construction</h2>
+                <p>Statutory construction in Bristevia aims to ascertain and give effect to the true intent of the Imperial Parliament and the Sovereign, harmonizing all statutes with the Constitution of the Imperial Sovereign of Bristevia and ensuring justice, consistency, and public order.</p>
+                <hr class="divider">
+            </section>
+
+            <section id="primary">
+                <h2>II. PRIMARY RULES OF INTERPRETATION</h2>
+                <ol>
+                    <li>
+                        <h3>Plain Meaning Rule (Verba Legis)</h3>
+                        <p>When the language of the law is clear, categorical, and unambiguous, its **literal meaning prevails**.</p>
+                        <p>Courts must not insert, subtract, or revise terms under the guise of interpretation.</p>
+                    </li>
+                    <li>
+                        <h3>Legislative Intent (Ratio Legis)</h3>
+                        <p>If a provision is ambiguous, courts must search for the **intent of the Imperial Parliament**, using:</p>
+                        <ul>
+                            <li>Parliamentary debates</li>
+                            <li>Committee reports</li>
+                            <li>Explanatory notes</li>
+                            <li>Contemporaneous circumstances</li>
+                            <li>Historical context of the statute</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Spirit and Purpose (Equitable Construction)</h3>
+                        <p>The **spirit of the law prevails** when literal interpretation leads to absurdity, injustice, or defeats the statute’s purpose. Courts must interpret statutes to advance the public welfare and imperial policy.</p>
+                    </li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="secondary">
+                <h2>III. SECONDARY RULES OF INTERPRETATION</h2>
+                <ol start="4">
+                    <li>
+                        <h3>Ejusdem Generis (Of the Same Kind)</h3>
+                        <p>When general terms follow specific examples, the general words are limited to things of the same class.</p>
+                        <p class="example">Example: “weapons such as swords, spears, halberds, and other instruments” → “other instruments” refers to similar melee weapons.</p>
+                    </li>
+                    <li>
+                        <h3>Noscitur a Sociis (Known by Associates)</h3>
+                        <p>A word is understood based on the **context of surrounding terms**, ensuring coherence within a clause.</p>
+                    </li>
+                    <li>
+                        <h3>Expressio Unius Est Exclusio Alterius (Expression of One Excludes Others)</h3>
+                        <p>Listing certain items in a statute implies the **exclusion of items not listed**, unless the context indicates otherwise.</p>
+                    </li>
+                    <li>
+                        <h3>Casus Omissus Pro Omissio Habendus Est</h3>
+                        <p>A matter not included in the statute is deemed **intentionally omitted**, unless necessary to fulfill the law’s purpose.</p>
+                    </li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="harmonization">
+                <h2>IV. HARMONIZATION DOCTRINES</h2>
+                <ol start="8">
+                    <li>
+                        <h3>Whole Act Rule</h3>
+                        <p>Provisions must be **read together**; no section may be interpreted in isolation if it leads to conflict.</p>
+                    </li>
+                    <li>
+                        <h3>Presumption Against Redundancy</h3>
+                        <p>Every word, clause, and phrase is presumed to have distinct meaning; **no part of a statute is superfluous**.</p>
+                    </li>
+                    <li>
+                        <h3>Rule of Consistency (In Pari Materia)</h3>
+                        <p>Statutes relating to the **same subject matter** must be interpreted together, even if enacted at different times.</p>
+                    </li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="presumptions">
+                <h2>V. PRESUMPTIONS IN INTERPRETATION</h2>
+                <ol start="11">
+                    <li>
+                        <h3>Presumption of Constitutionality</h3>
+                        <p>Statutes are presumed to conform with the Imperial Constitution. Doubt is resolved in favor of constitutionality unless there is clear violation.</p>
+                    </li>
+                    <li>
+                        <h3>Presumption of Good Faith</h3>
+                        <p>Imperial officers are presumed to act lawfully and in good faith.</p>
+                    </li>
+                    <li>
+                        <h3>Presumption Against Absurdity</h3>
+                        <p>Statutes are never presumed to command results that are **irrational, oppressive, impossible**, or contrary to public policy.</p>
+                    </li>
+                    <li>
+                        <h3>Penal Laws – Rule of Lenity</h3>
+                        <p>Ambiguities in criminal statutes must be resolved **in favor of the accused**, but not when doing so defeats the evident intent of Parliament.</p>
+                    </li>
+                    <li>
+                        <h3>Remedial & Social Legislation – Liberal Construction</h3>
+                        <p>Laws involving social welfare, labor, family protection, and public rights must be construed **broadly to benefit the classes intended**.</p>
+                    </li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="bristevia">
+                <h2>VI. SPECIAL DOCTRINES UNIQUE TO BRISTEVIA</h2>
+                <ol start="16">
+                    <li>
+                        <h3>Imperial Sovereign Intent Doctrine</h3>
+                        <p>Where ambiguity persists, courts consider **Imperial Declarations, Proclamations, and Royal Instruments** as supplementary interpretative material.</p>
+                    </li>
+                    <li>
+                        <h3>Imperial Unity Principle</h3>
+                        <p>Statutes must be interpreted to protect:</p>
+                        <ul>
+                            <li>Stability of the Realm</li>
+                            <li>Supremacy of the Constitution</li>
+                            <li>Integrity of the Provinces</li>
+                            <li>Authority of Imperial Courts</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Custom of the Realm</h3>
+                        <p>When statutes are silent, **longstanding Imperial customs or practices** may fill the gap, provided they do not conflict with written law.</p>
+                    </li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="temporal">
+                <h2>VII. TEMPORAL RULES OF INTERPRETATION</h2>
+                <ol start="19">
+                    <li>
+                        <h3>Prospective Application</h3>
+                        <p>Statutes apply **forward**, unless expressly stated otherwise. Penal laws cannot be applied retroactively unless favorable to the accused.</p>
+                    </li>
+                    <li>
+                        <h3>Repeals</h3>
+                        <p>Repeals by implication are **not favored**; courts strive to harmonize laws unless irreconcilable conflict exists.</p>
+                    </li>
+                    <li>
+                        <h3>Curative and Interpretative Statutes</h3>
+                        <p>Interpretative statutes are presumed **retroactive**, as they clarify the original meaning. Curative statutes may be retroactive when intended to validate acts procedurally defective but not unconstitutional.</p>
+                    </li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="admin">
+                <h2>VIII. ADMINISTRATIVE INTERPRETATION</h2>
+                <ol start="22">
+                    <li>
+                        <h3>Deference to Imperial Ministries</h3>
+                        <p>Courts give **great respect**—though not absolute obedience—to the interpretation of the Imperial Ministries, especially:</p>
+                        <ul>
+                            <li>Ministry of Justice</li>
+                            <li>Ministry of Finance</li>
+                            <li>Ministry of Trade</li>
+                            <li>Ministry of Internal Affairs</li>
+                        </ul>
+                        <p>Interpretation is respected when:</p>
+                        <ul>
+                            <li>It is consistent, long-standing, and reasonable</li>
+                            <li>It does not contradict the statute</li>
+                            <li>It is not arbitrary or oppressive</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Limits of Administrative Power</h3>
+                        <p>No administrative interpretation may:</p>
+                        <ul>
+                            <li>Amend a statute</li>
+                            <li>Expand penalties</li>
+                            <li>Create new obligations</li>
+                            <li>Contradict the Constitution</li>
+                        </ul>
+                    </li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="judicial">
+                <h2>IX. JUDICIAL CONSTRUCTION TECHNIQUES</h2>
+                <ol start="24">
+                    <li>
+                        <h3>Ratio Decidendi and Obiter Dicta</h3>
+                        <p>Only the **ratio decidendi** (legal reasoning essential to the ruling) forms precedent. **Obiter dicta** may guide but do not bind lower courts.</p>
+                    </li>
+                    <li>
+                        <h3>Stare Decisis</h3>
+                        <p>Past decisions of the Imperial Supreme Tribunal bind all lower courts unless:</p>
+                        <ul>
+                            <li>They contradict the Constitution</li>
+                            <li>They have become impracticable</li>
+                            <li>Social or economic conditions drastically changed</li>
+                            <li>Manifest injustice results from the doctrine</li>
+                        </ul>
+                    </li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="equity">
+                <h2>X. FINAL RULE: EQUITY AS A SUPPLEMENT</h2>
+                <p>Where the law is silent, courts may apply **equity**, guided by:</p>
+                <ul>
+                    <li>Fairness</li>
+                    <li>Reason</li>
+                    <li>Justice</li>
+                    <li>Preservation of the Realm</li>
+                </ul>
+                <p>But equity follows the law and may not defeat explicit statutory commands.</p>
+                <hr class="divider">
+            </section>
+
+            <section id="constitutional">
+                <h2>XI. CANONS OF CONSTITUTIONAL INTERPRETATION</h2>
+                <ol>
+                    <li>
+                        <h3>Primacy of the Constitution</h3>
+                        <p>All statutes must yield to the **Imperial Constitution of Bristevia**, the supreme and highest law of the Realm.</p>
+                    </li>
+                    <li>
+                        <h3>Original Intent of the Sovereign & Framers</h3>
+                        <p>Constitutional provisions are interpreted in accordance with the intent of the Framers, including:</p>
+                        <ul>
+                            <li>Constitutional debates</li>
+                            <li>Imperial Records of Deliberations</li>
+                            <li>Founding Declarations</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Living Constitution Principle</h3>
+                        <p>When provisions relate to societal evolution, courts adopt a **dynamic interpretation** consistent with Imperial values, modernization, and welfare of the Realm.</p>
+                    </li>
+                    <li>
+                        <h3>Self-Executing vs. Non-Self-Executing Clauses</h3>
+                        <ul>
+                            <li>Self-executing: Enforceable without further legislation.</li>
+                            <li>Non-self-executing: Require action from the Imperial Parliament.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Mandatory vs. Directory Constitutional Commands</h3>
+                        <ul>
+                            <li>Mandatory: Must be strictly followed; noncompliance voids the act.</li>
+                            <li>Directory: Deviation does not invalidate the act if the purpose is still satisfied.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Hierarchy of Constitutional Rights</h3>
+                        <p>Where rights conflict, courts employ:</p>
+                        <ul>
+                            <li>Balancing of Interests Test</li>
+                            <li>Compelling State Interest Standard</li>
+                            <li>Least Restrictive Means</li>
+                        </ul>
+                    </li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="numerical">
+                <h2>XII. NUMERICAL & TEXTUAL CANONS</h2>
+                <ol>
+                    <li>
+                        <h3>The Grammatical Canon</h3>
+                        <p>Courts adhere to **ordinary rules of grammar, punctuation, and syntax**. Misplaced modifiers, commas, and clauses may determine legislative intent.</p>
+                    </li>
+                    <li>
+                        <h3>Singular Includes Plural — and Vice Versa</h3>
+                        <p>Unless expressly limited, words in the singular include the plural, and words in the plural include the singular.</p>
+                    </li>
+                    <li>
+                        <h3>Mandatory vs. Permissive Terms</h3>
+                        <ul>
+                            <li>“Shall” = compulsory</li>
+                            <li>“Must” = absolute obligation</li>
+                            <li>“May” = discretionary</li>
+                            <li>“Should” = recommended, not binding</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Negative Language Implies Prohibition</h3>
+                        <p>Provisions phrased negatively (e.g., “no person shall…”) establish a prohibition that must be strictly followed.</p>
+                    </li>
+                    <li>
+                        <h3>Specific vs. General Statutes</h3>
+                        <p>When conflict exists: **Specific statute prevails over the general**, unless the general law is later and clearly intended to repeal the specific one.</p>
+                    </li>
+                    <li>
+                        <h3>The Last Antecedent Rule</h3>
+                        <p>A qualifying phrase refers only to the **nearest antecedent**, unless context shows broader application.</p>
+                    </li>
+                    <li>
+                        <h3>The Series-Qualifier Rule</h3>
+                        <p>A modifier at the end of a sentence applies to the **entire series of nouns** unless separated by punctuation.</p>
+                    </li>
+                    <li>
+                        <h3>The Rule on Definitions</h3>
+                        <p>Statutory definitions control the meaning of words throughout the statute, unless expressly limited.</p>
+                    </li>
+                </ol>
+                <hr class="divider">
+            </section>
+
+            <section id="application">
+                <h2>XIII. DOCTRINES IN STATUTORY APPLICATION</h2>
+                <ol>
+                    <li>
+                        <h3>Prospective vs. Retroactive Effect</h3>
+                        <ul>
+                            <li>Statutes apply **prospectively**, unless expressly stated otherwise.</li>
+                            <li>Penal laws retroact only when favorable to the accused.</li>
+                            <li>Interpretative statutes retroact as they merely clarify original meaning.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Separability Clause</h3>
+                        <p>If part of a statute is unconstitutional, the rest remains valid if separable and consistent with legislative intent.</p>
+                    </li>
+                    <li>
+                        <h3>Non-Separability Clause</h3>
+                        <p>If a statute declares itself non-severable, a single invalid part renders the **entire law void**.</p>
+                    </li>
+                    <li>
+                        <h3>Doctrine of Implied Repeal</h3>
+                        <p>Implied repeal is not favored. It exists only when:</p>
+                        <ul>
+                            <li>Two laws are irreconcilably inconsistent, or</li>
+                            <li>The later law covers the whole subject of the earlier one.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Doctrine of Substantial Compliance</h3>
+                        <p>Minor procedural defects do not invalidate compliance if the essential purpose of the statute is fulfilled.</p>
+                    </li>
+                    <li>
+                        <h3>Imperative vs. Directory Provisions</h3>
+                        <p>Courts classify provisions as:</p>
+                        <ul>
+                            <li>Imperative/Mandatory: Strict compliance required.</li>
+                            <li>Directory: Substantial compliance allowed.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Implied Powers of Government Agencies</h3>
+                        <p>Agencies possess powers necessarily implied from their express mandates, but may not:</p>
+                        <ul>
+                            <li>Create crimes</li>
+                            <li>Increase penalties</li>
+                            <li>Contradict statutes</li>
+                            <li>Expand jurisdiction</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Doctrine of Contemporaneous Construction</h3>
+                        <p>Longstanding and consistent interpretation by government agencies is given respect, especially if Parliament has not amended the law.</p>
+                    </li>
+                </ol>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
