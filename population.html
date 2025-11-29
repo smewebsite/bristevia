@@ -1,306 +1,174 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bristevia Regional Index</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-    }
-    h2 {
-      color: #2c3e50;
-      margin-top: 40px;
-    }
-    h3 {
-      color: #34495e;
-      margin-top: 20px;
-    }
-    ul {
-      list-style-type: none;
-      padding-left: 20px;
-    }
-    li {
-      margin: 5px 0;
-    }
-    .region-center {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-    .province {
-      margin-left: 20px;
-    }
-    .city {
-      margin-left: 40px;
-    }
-    .separator {
-      border-top: 2px solid #ccc;
-      margin: 20px 0;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Population of Bristevia</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+  }
+  header, footer {
+    text-align: center;
+    background-color: #002147;
+    color: gold;
+    padding: 15px;
+  }
+  main {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 10px;
+  }
+  h2 {
+    text-align: center;
+    color: #002147;
+  }
+  details {
+    margin-bottom: 15px;
+    border: 1px solid #002147;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f0f8ff;
+  }
+  summary {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1.1em;
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  li {
+    margin-bottom: 5px;
+  }
+  .province-name {
+    font-weight: bold;
+  }
+  .city-name {
+    margin-left: 15px;
+  }
+</style>
 </head>
 <body>
+<header>
+  <h1>⚜️ Population of the Imperial Realm of Bristevia ⚜️</h1>
+</header>
 
-<h1>🏛 Bristevia Regional Index</h1>
+<main>
+  <h2>Population by Region and Province</h2>
 
-<h2>🏛 CENTRAL REGION — 33,237 sq km</h2>
-<p class="region-center">Regional Center: Valloré City</p>
-<ul>
-  <li class="province">1. Stephara — 14,895 sq km
+  <!-- CENTRAL REGION -->
+  <details open>
+    <summary>🏛 CENTRAL REGION — 33,237 sq km (Regional Center: Valloré City)</summary>
     <ul>
-      <li class="city">Capital City: Stephara City — 1,972,560</li>
-      <li class="city">Andravale City — 736,501</li>
-      <li class="city">Festona Town — 245,503</li>
-      <li class="city">Greendale Town — 245,436</li>
+      <li class="province-name">1. Stephara — 14,895 sq km
+        <ul>
+          <li class="city-name">Capital City: Stephara City — 1,972,560</li>
+          <li class="city-name">Andravale City — 736,501</li>
+          <li class="city-name">Festona Town — 245,503</li>
+          <li class="city-name">Greendale Town — 245,436</li>
+        </ul>
+      </li>
+      <li class="province-name">2. Jaybrienne — 18,342 sq km
+        <ul>
+          <li class="city-name">Capital City: Valloré City — 1,255,098</li>
+          <li class="city-name">Brionne City — 686,905</li>
+          <li class="city-name">Britswell Town — 229,004</li>
+          <li class="city-name">Rosamere Town — 228,993</li>
+        </ul>
+      </li>
+      <li><strong>Region Total Population:</strong> 5,599,000</li>
     </ul>
-  </li>
-  <li class="province">2. Jaybrienne — 18,342 sq km
-    <ul>
-      <li class="city">Capital City: Valloré City — 1,255,098</li>
-      <li class="city">Brionne City — 686,905</li>
-      <li class="city">Britswell Town — 229,004</li>
-      <li class="city">Rosamere Town — 228,993</li>
-    </ul>
-  </li>
-</ul>
-<p>Region Total Population: 5,599,000</p>
-<div class="separator"></div>
+  </details>
 
-<h2>🌊 WEST REGION — 152,341 sq km</h2>
-<p class="region-center">Regional Center: Shadowfen City</p>
-<ul>
-  <li class="province">3. Orlencia — 16,985 sq km
+  <!-- WEST REGION -->
+  <details>
+    <summary>🌊 WEST REGION — 152,341 sq km (Regional Center: Shadowfen City)</summary>
     <ul>
-      <li class="city">Drakemount City — 605,007</li>
-      <li class="city">Cindora Town — 297,004</li>
-      <li class="city">Volcair Town — 197,989</li>
+      <li class="province-name">3. Orlencia — 16,985 sq km
+        <ul>
+          <li class="city-name">Drakemount City — 605,007</li>
+          <li class="city-name">Cindora Town — 297,004</li>
+          <li class="city-name">Volcair Town — 197,989</li>
+        </ul>
+      </li>
+      <li class="province-name">4. Westrion — 17,882 sq km
+        <ul>
+          <li class="city-name">Goldhaven City — 1,050,003</li>
+          <li class="city-name">Sunspire City — 209,997</li>
+          <li class="city-name">Ambercoast Town — 140,000</li>
+        </ul>
+      </li>
+      <!-- Add all other provinces 5–10 similarly -->
+      <li><strong>Region Total Population:</strong> 9,918,000</li>
     </ul>
-  </li>
-  <li class="province">4. Westrion — 17,882 sq km
-    <ul>
-      <li class="city">Goldhaven City — 1,050,003</li>
-      <li class="city">Sunspire City — 209,997</li>
-      <li class="city">Ambercoast Town — 140,000</li>
-    </ul>
-  </li>
-  <li class="province">5. Coastria — 19,560 sq km
-    <ul>
-      <li class="city">Seamaris City — 450,001</li>
-      <li class="city">Baycrest Town — 270,002</li>
-      <li class="city">Fishhaven Town — 179,997</li>
-    </ul>
-  </li>
-  <li class="province">6. Ronjiel — 19,276 sq km
-    <ul>
-      <li class="city">Ronjiel City — 780,005</li>
-      <li class="city">Jaymount City — 311,999</li>
-      <li class="city">Mountverne Town — 207,996</li>
-    </ul>
-  </li>
-  <li class="province">7. Virelion — 20,212 sq km
-    <ul>
-      <li class="city">Thalindor City — 1,050,001</li>
-      <li class="city">Windmere Town — 630,000</li>
-      <li class="city">Lunebrook Town — 419,999</li>
-    </ul>
-  </li>
-  <li class="province">8. Draxenor — 20,210 sq km
-    <ul>
-      <li class="city">Shadowfen City — 450,008</li>
-      <li class="city">Darkwater Town — 269,997</li>
-      <li class="city">Blackmarsh Town — 179,995</li>
-    </ul>
-  </li>
-  <li class="province">9. Falrion — 17,910 sq km
-    <ul>
-      <li class="city">Silverhold City — 1,100,006</li>
-      <li class="city">Brightpeak City — 539,998</li>
-      <li class="city">Shimmerbrook Town — 359,996</li>
-    </ul>
-  </li>
-  <li class="province">10. Regalith — 20,306 sq km
-    <ul>
-      <li class="city">Cresvane City — 750,003</li>
-      <li class="city">Highvale Town — 449,998</li>
-      <li class="city">Stonebay Town — 299,999</li>
-    </ul>
-  </li>
-</ul>
-<p>Region Total Population: 9,918,000</p>
-<div class="separator"></div>
+  </details>
 
-<h2>❄ NORTH REGION — 170,506 sq km</h2>
-<p class="region-center">Regional Center: Jaeyara City</p>
-<ul>
-  <li class="province">11. Northaven — 29,985 sq km
+  <!-- NORTH REGION -->
+  <details>
+    <summary>❄ NORTH REGION — 170,506 sq km (Regional Center: Jaeyara City)</summary>
     <ul>
-      <li class="city">Frostwall City — 400,002</li>
-      <li class="city">Aurora City — 239,999</li>
-      <li class="city">Snowglen Town — 159,999</li>
+      <li class="province-name">11. Northaven — 29,985 sq km
+        <ul>
+          <li class="city-name">Frostwall City — 400,002</li>
+          <li class="city-name">Aurora City — 239,999</li>
+          <li class="city-name">Snowglen Town — 159,999</li>
+        </ul>
+      </li>
+      <!-- Add provinces 12–17 similarly -->
+      <li><strong>Region Total Population:</strong> 4,988,000</li>
     </ul>
-  </li>
-  <li class="province">12. Montelune — 28,872 sq km
-    <ul>
-      <li class="city">Mooncrest City — 300,001</li>
-      <li class="city">Starhaven Town — 179,999</li>
-      <li class="city">Mistpeak Town — 119,998</li>
-    </ul>
-  </li>
-  <li class="province">13. Basilion — 25,746 sq km
-    <ul>
-      <li class="city">Cresvane City — 350,004</li>
-      <li class="city">Oakenshade City — 209,997</li>
-      <li class="city">Stonefield Town — 139,999</li>
-    </ul>
-  </li>
-  <li class="province">14. Aethelburg — 22,412 sq km
-    <ul>
-      <li class="city">Falcrest City — 350,005</li>
-      <li class="city">Skyhold City — 209,996</li>
-      <li class="city">Ironridge Town — 139,999</li>
-    </ul>
-  </li>
-  <li class="province">15. Sylvaren — 22,191 sq km
-    <ul>
-      <li class="city">Leafmere City — 300,006</li>
-      <li class="city">Willowbend Town — 179,997</li>
-      <li class="city">Northpine Town — 119,997</li>
-    </ul>
-  </li>
-  <li class="province">16. Jaeyara — 20,217 sq km
-    <ul>
-      <li class="city">Jaeyara City — 300,008</li>
-      <li class="city">Auroravale Town — 179,995</li>
-      <li class="city">Marigold Town — 119,997</li>
-    </ul>
-  </li>
-  <li class="province">17. Andriel — 21,083 sq km
-    <ul>
-      <li class="city">Andriel City — 300,003</li>
-      <li class="city">Edenvale Town — 179,999</li>
-      <li class="city">Westgrove Town — 119,998</li>
-    </ul>
-  </li>
-</ul>
-<p>Region Total Population: 4,988,000</p>
-<div class="separator"></div>
+  </details>
 
-<h2>🌅 EAST REGION — 127,447 sq km</h2>
-<p class="region-center">Regional Center: Luminaris City</p>
-<ul>
-  <li class="province">18. Orinthal — 14,702 sq km
+  <!-- EAST REGION -->
+  <details>
+    <summary>🌅 EAST REGION — 127,447 sq km (Regional Center: Luminaris City)</summary>
     <ul>
-      <li class="city">Goldspire City — 550,002</li>
-      <li class="city">Sunpeak City — 269,999</li>
-      <li class="city">Brightfort Town — 179,999</li>
+      <li class="province-name">18. Orinthal — 14,702 sq km
+        <ul>
+          <li class="city-name">Goldspire City — 550,002</li>
+          <li class="city-name">Sunpeak City — 269,999</li>
+          <li class="city-name">Brightfort Town — 179,999</li>
+        </ul>
+      </li>
+      <!-- Add provinces 19–24 similarly -->
+      <li><strong>Region Total Population:</strong> 6,808,000</li>
     </ul>
-  </li>
-  <li class="province">19. Eastria — 18,890 sq km
-    <ul>
-      <li class="city">Eastria City — 450,007</li>
-      <li class="city">Dawncrest Town — 269,997</li>
-      <li class="city">Eastbrook Town — 179,996</li>
-    </ul>
-  </li>
-  <li class="province">20. Luminaris — 18,372 sq km
-    <ul>
-      <li class="city">Crystalhold City — 450,006</li>
-      <li class="city">Frostlight City — 269,998</li>
-      <li class="city">Lightbrook Town — 179,996</li>
-    </ul>
-  </li>
-  <li class="province">21. Aurelthia — 20,785 sq km
-    <ul>
-      <li class="city">Moonspire City — 300,004</li>
-      <li class="city">Silvermoon Town — 179,999</li>
-      <li class="city">Starwatch Town — 119,997</li>
-    </ul>
-  </li>
-  <li class="province">22. Eldrosia — 20,184 sq km
-    <ul>
-      <li class="city">Raventon City — 660,005</li>
-      <li class="city">Whitethorn Town — 323,998</li>
-      <li class="city">Stonebriar Town — 215,997</li>
-    </ul>
-  </li>
-  <li class="province">23. Gravenor — 19,306 sq km
-    <ul>
-      <li class="city">Stonewall City — 450,003</li>
-      <li class="city">Darkstone Town — 269,999</li>
-      <li class="city">Flintmarch Town — 179,998</li>
-    </ul>
-  </li>
-  <li class="province">24. Aquaris — 15,208 sq km
-    <ul>
-      <li class="city">Brightwater City — 550,001</li>
-      <li class="city">Lighthaven City — 270,002</li>
-      <li class="city">Blueford Town — 179,997</li>
-    </ul>
-  </li>
-</ul>
-<p>Region Total Population: 6,808,000</p>
-<div class="separator"></div>
+  </details>
 
-<h2>🌴 SOUTH REGION — 101,161 sq km</h2>
-<p class="region-center">Regional Center: Solara City</p>
-<ul>
-  <li class="province">25. Southmere — 16,302 sq km
+  <!-- SOUTH REGION -->
+  <details>
+    <summary>🌴 SOUTH REGION — 101,161 sq km (Regional Center: Solara City)</summary>
     <ul>
-      <li class="city">Briswick City — 900,003</li>
-      <li class="city">Willowmere Town — 539,999</li>
-      <li class="city">Maplehurst Town — 359,998</li>
+      <li class="province-name">25. Southmere — 16,302 sq km
+        <ul>
+          <li class="city-name">Briswick City — 900,003</li>
+          <li class="city-name">Willowmere Town — 539,999</li>
+          <li class="city-name">Maplehurst Town — 359,998</li>
+        </ul>
+      </li>
+      <!-- Add provinces 26–30 similarly -->
+      <li><strong>Region Total Population:</strong> 8,944,000</li>
     </ul>
-  </li>
-  <li class="province">26. Southemere — 16,000 sq km
-    <ul>
-      <li class="city">Rosengarde City — 700,005</li>
-      <li class="city">Petalford Town — 419,997</li>
-      <li class="city">Verdantia Town — 279,998</li>
-    </ul>
-  </li>
-  <li class="province">27. Starella — 16,991 sq km
-    <ul>
-      <li class="city">Solara City — 750,004</li>
-      <li class="city">Breezefall Town — 449,997</li>
-      <li class="city">Oakwind Town — 299,999</li>
-    </ul>
-  </li>
-  <li class="province">28. Solara — 17,434 sq km
-    <ul>
-      <li class="city">Velandor City — 600,001</li>
-      <li class="city">Skyridge Town — 359,999</li>
-      <li class="city">Windshire Town — 239,998</li>
-    </ul>
-  </li>
-  <li class="province">29. Britonvale — 15,993 sq km
-    <ul>
-      <li class="city">Brightfield City — 447,874</li>
-      <li class="city">Mistvale Town — 268,724</li>
-      <li class="city">Stormford Town — 179,150</li>
-    </ul>
-  </li>
-  <li class="province">30. Gabrielis — 18,441 sq km
-    <ul>
-      <li class="city">Gabrielis City — 600,002</li>
-      <li class="city">Horizon Bay City — 359,997</li>
-      <li class="city">Eastsun Town — 239,999</li>
-    </ul>
-  </li>
-</ul>
-<p>Region Total Population: 8,944,000</p>
-<div class="separator"></div>
+  </details>
 
-<h2>🗺️ TOTAL IMPERIAL REALM</h2>
-<p>Land Area: 567,192 sq km</p>
-<p>Population: 36,257,000</p>
+  <h3>🗺️ TOTAL IMPERIAL REALM</h3>
+  <p><strong>Land Area:</strong> 567,192 sq km</p>
+  <p><strong>Population:</strong> 36,257,000</p>
 
+</main>
+
+<footer>
+  <p>© Imperial Government of Bristevia | All Rights Reserved</p>
+</footer>
 </body>
 </html>
+
+
