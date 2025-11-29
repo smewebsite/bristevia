@@ -1,126 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Population and Geography of Bristevia</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bristevia Geography & Demographics</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Custom styles for the geography page to override/enhance site-wide CSS */
+    body {
+      background-color: #001f3f;
+      color: white;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #002b66;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid gold;
+    }
+    header h1 {
+      color: gold;
+      font-size: 2em;
+      margin: 0;
+    }
+    .container {
+      display: grid;
+      /* Adjusted for better display of more information */
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .region-card {
+      background-color: #003366;
+      border: 2px solid gold;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    }
+    .region-card h2 {
+      color: gold;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .region-center {
+      color: #999;
+      font-size: 0.9em;
+      text-align: center;
+      margin-top: -10px;
+      margin-bottom: 15px;
+    }
+    .province-list {
+      list-style-type: none;
+      padding-left: 0;
+      line-height: 1.4;
+    }
+    .province-list > li {
+      margin-top: 15px;
+      margin-bottom: 5px;
+      font-weight: bold; /* Highlight the province name */
+      border-bottom: 1px dashed rgba(255, 215, 0, 0.2);
+      padding-bottom: 5px;
+    }
+    .city-population {
+      font-weight: normal;
+      font-size: 0.9em;
+      list-style-type: '• '; /* Custom bullet point for cities */
+      margin: 5px 0 5px 20px;
+      padding-left: 0;
+    }
+    .province-pop-total {
+      font-style: italic;
+      color: #ccc;
+      font-size: 0.85em;
+      margin-left: 20px;
+      margin-bottom: 5px;
+    }
+    .total-area {
+      text-align: right;
+      font-weight: bold;
+      color: #ffd700;
+      margin-top: 10px;
+      border-top: 1px solid gold;
+      padding-top: 8px;
+    }
+    .total-population {
+      text-align: right;
+      font-weight: bold;
+      color: #ffd700;
+      margin-bottom: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #002b66;
+      border-top: 3px solid gold;
+      color: white;
+      font-size: 0.9em;
+    }
+    .grand-total {
+      font-size: 1.2em;
+      color: gold;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>⚜️ THE IMPERIAL SOVEREIGN OF BRISTEVIA ⚜️</h1>
-        <img src="images/bristevia_flag.jpeg" alt="Flag of Bristevia" width="600">
-        <p>By the Grace of the Eternal Crown</p>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="constitution.html">Constitution</a>
-            <a href="geography.html">Geography</a>
-            <a href="population.html" style="color: gold; text-decoration: none; font-weight: bold;">Population</a>
-            </nav>
-    </header>
+  <header>
+    <h1>🌍 Geography & Demographics of the Imperial Realm of Bristevia</h1>
+  </header>
 
-    <main>
-        <h2>🏛 Imperial Realm Population & Geography</h2>
+  <div class="container">
+    <div class="region-card">
+      <h2>🏛 CENTRAL REGION (2)</h2>
+      <div class="region-center">Regional Center: Valloré City</div>
+      <ul class="province-list">
+        <li>
+          1. Stephara — 14,895 sq km
+          <ul class="city-population">
+            <li>Capital City: Stephara City — 1,972,560</li>
+            <li>Andravale City — 736,501</li>
+            <li>Festona Town — 245,503</li>
+            <li>Greendale Town — 245,436</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 3,200,000</div>
+        </li>
+        <li>
+          2. Jaybrienne — 18,342 sq km
+          <ul class="city-population">
+            <li>Capital City: Valloré City — 1,255,098</li>
+            <li>Brionne City — 686,905</li>
+            <li>Britswell Town — 229,004</li>
+            <li>Rosamere Town — 228,993</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 2,400,000</div>
+        </li>
+      </ul>
+      <div class="total-population">Regional Pop. Total: 5,599,000</div>
+      <div class="total-area">Regional Area Total: 33,237 sq km</div>
+    </div>
 
-        <section class="region">
-            <h3 class="region-header">🏛 CENTRAL REGION — 33,237 sq km</h3>
-            <p><strong>Regional Center:</strong> Valloré City</p>
-            <p class="region-total">Region Total Population: **5,599,000**</p>
+    <div class="region-card">
+      <h2>🌊 WEST REGION (8)</h2>
+      <div class="region-center">Regional Center: Shadowfen City</div>
+      <ul class="province-list">
+        <li>
+          3. Orlencia — 16,985 sq km
+          <ul class="city-population">
+            <li>Drakemount City — 605,007</li>
+            <li>Cindora Town — 297,004</li>
+            <li>Volcair Town — 197,989</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 1,100,000</div>
+        </li>
+        <li>
+          4. Westrion — 17,882 sq km
+          <ul class="city-population">
+            <li>Goldhaven City — 1,050,003</li>
+            <li>Sunspire City — 209,997</li>
+            <li>Ambercoast Town — 140,000</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 1,400,000</div>
+        </li>
+        <li>
+          5. Coastria — 19,560 sq km
+          <ul class="city-population">
+            <li>Seamaris City — 450,001</li>
+            <li>Baycrest Town — 270,002</li>
+            <li>Fishhaven Town — 179,997</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 900,000</div>
+        </li>
+        <li>
+          6. Ronjiel — 19,276 sq km
+          <ul class="city-population">
+            <li>Ronjiel City — 780,005</li>
+            <li>Jaymount City — 311,999</li>
+            <li>Mountverne Town — 207,996</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 1,300,000</div>
+        </li>
+        <li>
+          7. Virelion — 20,212 sq km
+          <ul class="city-population">
+            <li>Thalindor City — 1,050,001</li>
+            <li>Windmere Town — 630,000</li>
+            <li>Lunebrook Town — 419,999</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 2,100,000</div>
+        </li>
+        <li>
+          8. Draxenor — 20,210 sq km
+          <ul class="city-population">
+            <li>Shadowfen City — 450,008</li>
+            <li>Darkwater Town — 269,997</li>
+            <li>Blackmarsh Town — 179,995</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 900,000</div>
+        </li>
+        <li>
+          9. Falrion — 17,910 sq km
+          <ul class="city-population">
+            <li>Silverhold City — 1,100,006</li>
+            <li>Brightpeak City — 539,998</li>
+            <li>Shimmerbrook Town — 359,996</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 2,000,000</div>
+        </li>
+        <li>
+          10. Regalith — 20,306 sq km
+          <ul class="city-population">
+            <li>Cresvane City — 750,003</li>
+            <li>Highvale Town — 449,998</li>
+            <li>Stonebay Town — 299,999</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 1,518,000</div>
+        </li>
+      </ul>
+      <div class="total-population">Regional Pop. Total: 9,918,000</div>
+      <div class="total-area">Regional Area Total: 152,341 sq km</div>
+    </div>
 
-            <div class="province">
-                <h4>1. Stephara — 14,895 sq km</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>City/Town</th>
-                            <th>Population</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Capital City: Stephara City</td><td>1,972,560</td></tr>
-                        <tr><td>Andravale City</td><td>736,501</td></tr>
-                        <tr><td>Festona Town</td><td>245,503</td></tr>
-                        <tr><td>Greendale Town</td><td>245,436</td></tr>
-                    </tbody>
-                </table>
-            </div>
+    <div class="region-card">
+      <h2>❄ NORTH REGION (7)</h2>
+      <div class="region-center">Regional Center: Jaeyara City</div>
+      <ul class="province-list">
+        <li>
+          11. Northaven — 29,985 sq km
+          <ul class="city-population">
+            <li>Frostwall City — 400,002</li>
+            <li>Aurora City — 239,999</li>
+            <li>Snowglen Town — 159,999</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 800,000</div>
+        </li>
+        <li>
+          12. Montelune — 28,872 sq km
+          <ul class="city-population">
+            <li>Mooncrest City — 300,001</li>
+            <li>Starhaven Town — 179,999</li>
+            <li>Mistpeak Town — 119,998</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 600,000</div>
+        </li>
+        <li>
+          13. Basilion — 25,746 sq km
+          <ul class="city-population">
+            <li>Cresvane City — 350,004</li>
+            <li>Oakenshade City — 209,997</li>
+            <li>Stonefield Town — 139,999</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 700,000</div>
+        </li>
+        <li>
+          14. Aethelburg — 22,412 sq km
+          <ul class="city-population">
+            <li>Falcrest City — 350,005</li>
+            <li>Skyhold City — 209,996</li>
+            <li>Ironridge Town — 139,999</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 700,000</div>
+        </li>
+        <li>
+          15. Sylvaren — 22,191 sq km
+          <ul class="city-population">
+            <li>Leafmere City — 300,006</li>
+            <li>Willowbend Town — 179,997</li>
+            <li>Northpine Town — 119,997</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 600,000</div>
+        </li>
+        <li>
+          16. Jaeyara — 20,217 sq km
+          <ul class="city-population">
+            <li>Jaeyara City — 300,008</li>
+            <li>Auroravale Town — 179,995</li>
+            <li>Marigold Town — 119,997</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 600,000</div>
+        </li>
+        <li>
+          17. Andriel — 21,083 sq km
+          <ul class="city-population">
+            <li>Andriel City — 300,003</li>
+            <li>Edenvale Town — 179,999</li>
+            <li>Westgrove Town — 119,998</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 688,000</div>
+        </li>
+      </ul>
+      <div class="total-population">Regional Pop. Total: 4,988,000</div>
+      <div class="total-area">Regional Area Total: 170,506 sq km</div>
+    </div>
 
-            <div class="province">
-                <h4>2. Jaybrienne — 18,342 sq km</h4>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>City/Town</th>
-                            <th>Population</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td>Capital City: Valloré City</td><td>1,255,098</td></tr>
-                        <tr><td>Brionne City</td><td>686,905</td></tr>
-                        <tr><td>Britswell Town</td><td>229,004</td></tr>
-                        <tr><td>Rosamere Town</td><td>228,993</td></tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-        <hr>
+    <div class="region-card">
+      <h2>🌅 EAST REGION (7)</h2>
+      <div class="region-center">Regional Center: Luminaris City</div>
+      <ul class="province-list">
+        <li>
+          18. Orinthal — 14,702 sq km
+          <ul class="city-population">
+            <li>Goldspire City — 550,002</li>
+            <li>Sunpeak City — 269,999</li>
+            <li>Brightfort Town — 179,999</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 1,000,000</div>
+        </li>
+        <li>
+          19. Eastria — 18,890 sq km
+          <ul class="city-population">
+            <li>Eastria City — 450,007</li>
+            <li>Dawncrest Town — 269,997</li>
+            <li>Eastbrook Town — 179,996</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 900,000</div>
+        </li>
+        <li>
+          20. Luminaris — 18,372 sq km
+          <ul class="city-population">
+            <li>Crystalhold City — 450,006</li>
+            <li>Frostlight City — 269,998</li>
+            <li>Lightbrook Town — 179,996</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 900,000</div>
+        </li>
+        <li>
+          21. Aurelthia — 20,785 sq km
+          <ul class="city-population">
+            <li>Moonspire City — 300,004</li>
+            <li>Silvermoon Town — 179,999</li>
+            <li>Starwatch Town — 119,997</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 600,000</div>
+        </li>
+        <li>
+          22. Eldrosia — 20,184 sq km
+          <ul class="city-population">
+            <li>Raventon City — 660,005</li>
+            <li>Whitethorn Town — 323,998</li>
+            <li>Stonebriar Town — 215,997</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 1,200,000</div>
+        </li>
+        <li>
+          23. Gravenor — 19,306 sq km
+          <ul class="city-population">
+            <li>Stonewall City — 450,003</li>
+            <li>Darkstone Town — 269,999</li>
+            <li>Flintmarch Town — 179,998</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 900,000</div>
+        </li>
+        <li>
+          24. Aquaris — 15,208 sq km
+          <ul class="city-population">
+            <li>Brightwater City — 550,001</li>
+            <li>Lighthaven City — 270,002</li>
+            <li>Blueford Town — 179,997</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 1,208,000</div>
+        </li>
+      </ul>
+      <div class="total-population">Regional Pop. Total: 6,808,000</div>
+      <div class="total-area">Regional Area Total: 127,447 sq km</div>
+    </div>
 
-        <section class="region">
-            <h3 class="region-header">🌊 WEST REGION — 152,341 sq km</h3>
-            <p><strong>Regional Center:</strong> Shadowfen City</p>
-            <p class="region-total">Region Total Population: **9,918,000**</p>
-            
-            <div class="province">
-                <h4>3. Orlencia — 16,985 sq km</h4>
-                <table>
-                    <thead><tr><th>City/Town</th><th>Population</th></tr></thead>
-                    <tbody>
-                        <tr><td>Drakemount City</td><td>605,007</td></tr>
-                        <tr><td>Cindora Town</td><td>297,004</td></tr>
-                        <tr><td>Volcair Town</td><td>197,989</td></tr>
-                    </tbody>
-                </table>
-            </div>
+    <div class="region-card">
+      <h2>🌴 SOUTH REGION (6)</h2>
+      <div class="region-center">Regional Center: Solara City</div>
+      <ul class="province-list">
+        <li>
+          25. Southmere — 16,302 sq km
+          <ul class="city-population">
+            <li>Briswick City — 900,003</li>
+            <li>Willowmere Town — 539,999</li>
+            <li>Maplehurst Town — 359,998</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 1,800,000</div>
+        </li>
+        <li>
+          26. Southemere — 16,000 sq km
+          <ul class="city-population">
+            <li>Rosengarde City — 700,005</li>
+            <li>Petalford Town — 419,997</li>
+            <li>Verdantia Town — 279,998</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 1,400,000</div>
+        </li>
+        <li>
+          27. Starella — 16,991 sq km
+          <ul class="city-population">
+            <li>Solara City — 750,004</li>
+            <li>Breezefall Town — 449,997</li>
+            <li>Oakwind Town — 299,999</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 1,500,000</div>
+        </li>
+        <li>
+          28. Solara — 17,434 sq km
+          <ul class="city-population">
+            <li>Velandor City — 600,001</li>
+            <li>Skyridge Town — 359,999</li>
+            <li>Windshire Town — 239,998</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 1,200,000</div>
+        </li>
+        <li>
+          29. Britonvale — 15,993 sq km
+          <ul class="city-population">
+            <li>Brightfield City — 447,874</li>
+            <li>Mistvale Town — 268,724</li>
+            <li>Stormford Town — 179,150</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 895,748</div>
+        </li>
+        <li>
+          30. Gabrielis — 18,441 sq km
+          <ul class="city-population">
+            <li>Gabrielis City — 600,002</li>
+            <li>Horizon Bay City — 359,997</li>
+            <li>Eastsun Town — 239,999</li>
+          </ul>
+          <div class="province-pop-total">Province Population: 1,400,000</div>
+        </li>
+      </ul>
+      <div class="total-population">Regional Pop. Total: 8,944,000</div>
+      <div class="total-area">Regional Area Total: 101,161 sq km</div>
+    </div>
+  </div>
 
-            </section>
-        <hr>
-
-        <section class="region">
-            <h3 class="region-header">❄ NORTH REGION — 170,506 sq km</h3>
-            <p><strong>Regional Center:</strong> Jaeyara City</p>
-            <p class="region-total">Region Total Population: **4,988,000**</p>
-            
-            </section>
-        <hr>
-
-        <section class="region">
-            <h3 class="region-header">🌅 EAST REGION — 127,447 sq km</h3>
-            <p><strong>Regional Center:</strong> Luminaris City</p>
-            <p class="region-total">Region Total Population: **6,808,000**</p>
-            
-            </section>
-        <hr>
-
-        <section class="region">
-            <h3 class="region-header">🌴 SOUTH REGION — 101,161 sq km</h3>
-            <p><strong>Regional Center:</strong> Solara City</p>
-            <p class="region-total">Region Total Population: **8,944,000**</p>
-            
-            </section>
-        <hr>
-        
-        <section id="grand-totals">
-            <h2>🗺️ TOTAL IMPERIAL REALM</h2>
-            <ul>
-                <li><strong>Land Area:</strong> 567,192 sq km</li>
-                <li><strong>Population:</strong> **36,257,000**</li>
-            </ul>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>© Imperial Government of Bristevia | All Rights Reserved</p>
-    </footer>
+  <footer>
+    <p class="grand-total">🗺️ TOTAL IMPERIAL REALM AREA: 567,192 sq km</p>
+    <p class="grand-total">👥 TOTAL IMPERIAL REALM POPULATION: 36,257,000</p>
+    <p style="margin-top: 10px;">Data compiled from Imperial Census Bureau.</p>
+  </footer>
 </body>
 </html>
